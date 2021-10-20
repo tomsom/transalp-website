@@ -13,6 +13,7 @@ hr {
     width: 100%;
 }
 h1 {
+    font-weight: normal;
     font-size: 32px;
     padding: 0;
     margin: 0;
@@ -37,16 +38,17 @@ blockquote {
 header {
     position: fixed;
     width: 100%;
-    height: 4vh;
+    height: 6vh;
     top: 0;
     left: 0;
     background-color: var(--background);
     opacity: 1;
     padding: 0.5rem;
-    box-shadow: 0px 1px 4px gray;
+    box-shadow: 0px 1px 2px #ccc;
     
     display: flex;
     flex-direction: row;
+    align-items: center;
 }
 article {
     margin-top: 4vh;
@@ -65,7 +67,7 @@ p {
 
 .page{
     padding: 0 1rem;
-    height: 90vh;
+    height: 88vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -77,17 +79,20 @@ p {
 }
 
 .card {
-    background: var(--card-background);
+    border: #999;
+    border-width: 1px;
     border-radius: 0.5rem;
-    box-shadow: 3px 3px 4px grey;
+    box-shadow: 1px 1px 4px #aaa;
     padding: 0.5rem;
     margin-bottom: 1rem;
 }
 
 .text-card{
+    border: #aaa;
+    border-width: 1px;
     background: var(--card-background);
     border-radius: 0.5rem;
-    box-shadow: 3px 3px 4px grey;
+    box-shadow: 2px 2px 4px #aaa;
     padding: 0.5rem;
     margin-bottom: 1rem;
     height: 80vh;
