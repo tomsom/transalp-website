@@ -2,28 +2,62 @@ body {
     text-align: left;
     position: relative;
     font-family: Arial, Helvetica, sans-serif;
-    padding: 1rem;
+    padding: 0;
     margin: 0;
     --logo-height: 50px;
+    --foreground: #000;
+    --background: #fff;
 } 
+h1 {
+    font-size: 24px;
+    padding: 0;
+    margin: 0;
+}
 h1, h2 {
     text-align: center;
+}
+a {
+    text-decoration: none;
+    color: var(--foreground);
 }
 blockquote {
     font-style: italic;
 }
-#top-logos {
-    position: relative;
-    height: var(--logo-height);
+
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: var(--background);
+    opacity: 1;
+    padding: 0.5rem;
+    box-shadow: 0px 1px 5px black;
+    
+    display: flex;
+    flex-direction: row;
+}
+article {
+    margin-top: 4rem;
 }
 
 #rig-logo {
-    position: absolute;
-    left: 1rem;
-    height: var(--logo-height);
+    height: 24px;
+    margin-right: 8px;
 }
 #wbr-logo {
-    position: absolute;
-    right: 1rem;
     height: var(--logo-height);
+}
+.info-icon {
+    text-align: center;
+}
+.quote {
+    padding: 0rem 1rem;
+}
+
+.button {
+    text-align: center;
+    background-color: #15b144;
+    padding: 0.5rem;
+    border-radius: 4px;
 }
