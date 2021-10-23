@@ -1,3 +1,5 @@
+/* GENERAL */
+
 @font-face {
     font-family: 'Roboto-Slab';
     src: url("../src/Roboto_Slab/RobotoSlab-VariableFont_wght.ttf") format('truetype');
@@ -8,12 +10,12 @@
     src: url("../src/Lato/Lato-Regular.ttf") format('truetype');
   }
 
-  @font-face {
-    font-family: 'Fira';
-    src: url("../src/Fira/FiraSans-Regular.ttf") format('truetype');
-  }
 * {
     margin: 0;
+    --logo-height: 50px;
+    --foreground: #000;
+    --background: #fff;
+    --card-background: #e1e1f7;
 }
 body {
     text-align: left;
@@ -21,11 +23,10 @@ body {
     font-family: Lato, Helvetica, sans-serif;
     padding: 0;
     margin: 0;
-    --logo-height: 50px;
-    --foreground: #000;
-    --background: #fff;
-    --card-background: #e1e1f7;
-} 
+   
+}
+
+/* BASIC FORMATTING */
 hr {
     width: 100%;
     margin: 0.4rem;
@@ -33,6 +34,7 @@ hr {
     margin-right: auto;
 
 }
+
 h1 {
     font-weight: bolder;
     font-size: 2rem;
@@ -41,24 +43,24 @@ h1 {
     letter-spacing: 3px;
     text-transform: uppercase;
 }
+
 h2 {
     font-size: 1.7rem;
     margin: 0;
 }
+
 h4 {
     font-size: 1.7rem;
     margin: 0;
 }
-h3 {
-}
+
 h5 {
-    margin-top: 1rem;
+    margin: 1rem 0;
     font-size: 1rem;
 }
-ul {
-    margin: 0.5rem 0rem;
 
-}
+ul {margin: 0.5rem 0rem;}
+
 a {
     text-decoration: none;
     color: #000;
@@ -70,12 +72,24 @@ blockquote {
     align-items: center;
 }
 
+article {margin-top: 4vh;}
+
+p {margin: 0;}
+
+.images {
+    width: 80%;
+    margin-left: 10%;
+    margin-right: auto;
+}
+
+/* TITLE */
 header {
     opacity: 1;
     padding: 0.5rem;
     height: 100vh;
-
 }
+
+#rig-logo {height: 2.8rem;}
 
 .title {
     text-align: center;
@@ -86,34 +100,9 @@ header {
     justify-content: space-evenly;
 }
 
-.from {
-    font-size: 0.8rem;
-    padding-bottom: 2rem;
-}
-
-.images {
-    width: 80%;
-    margin-left: 10%;
-    margin-right: auto;
-}
-
-.conclusion {
-    margin: 1rem 0;
-    font-weight: bold;
-    text-align: center;
-    
-}
-article {
-    margin-top: 4vh;
-}
-p {
-    margin: 0;
-    
-}
-
-
-
-.page{
+/* ARTICE */
+/* PAGE ARANGEMENT */
+.page, .page- {
     padding: 0 1rem;
     height: 100vh;
     display: flex;
@@ -121,11 +110,11 @@ p {
     justify-content:space-around;
     
 }
-#title {
-    padding-top: 1rem;
-}
+.page- {background-color: rgb(223, 217, 217);}
 
+/* BOTTOM PAGE CARD STYLING */
 .card {
+    text-align: center;
     border: #ccc;
     border-width: 1px;
     border-style: solid;
@@ -136,16 +125,7 @@ p {
 }
 
 
-#rig-logo {
-    height: 2.8rem;
-    width: 2.8rem;
-    margin-right: 8px;
-}
-#wbr-logo {
-    width: 70%;
-    padding-top: 5rem;
-    padding-bottom: 3rem;
-}
+/* BIG NUMBER STYLING */
 .number {
     margin-top: 1rem;
     text-align: center;
@@ -154,6 +134,7 @@ p {
     
 }
 
+/* DONATE BUTTON */
 .donate-now {
     padding: 1rem auto;
     text-align: center; 
@@ -166,32 +147,4 @@ p {
     color: #fff;   
     font-size: 2rem;
     font-weight: bold;
-    
-}
-
-#for-wbr {
-    padding-left: 6rem;
-    text-align: right;
-}
-.info-icon {
-    text-align: center;
-}
-.quote {
-    padding: 1rem 1rem;
-    font-size: 0.9rem;
-}
-
-.button {
-    text-align: center;
-    background-color: #15b144;
-    padding: 1rem;
-    border-radius: 2rem;
-    font-size: 2rem;
-    letter-spacing: 0.1rem;
-    color: #fff;
-    margin-top: 2rem;
-}
-
-.center-text {
-    text-align: center;
 }
