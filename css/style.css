@@ -17,16 +17,19 @@
     --background: #fff;
     --card-background: #fff;
     --accent-color: rgb(79, 99, 212);
-    --page-bg: #e6f0f1;
+    --page-bg: #fff;
     --page--bg: #f0f4f7;
+
 }
+
 body {
     text-align: left;
     position: relative;
     font-family: Lato, Helvetica, sans-serif;
     padding: 0;
     margin: 0;
-   
+    color: var(--foreground);
+    background-color: var(--background);
 }
 
 /* BASIC FORMATTING */
@@ -80,13 +83,14 @@ article {margin-top: 4vh;}
 
 p {margin: 0;}
 
-.images {
+.images, .images-dark, .images-light {
     width: 80%;
     margin-left: 10%;
     margin-right: auto;
     margin-bottom: 2rem;
 }
-
+.images-dark {display: none;}
+.images-light {display: inline;}
 .bottom-margin {margin-bottom: 1.5rem;}
 
 /* TITLE */
@@ -94,6 +98,7 @@ header {
     opacity: 1;
     padding: 0.5rem;
     height: 100vh;
+    background-color: var(--background);
 }
 
 #rig-logo {height: 2.8rem;}
@@ -157,4 +162,55 @@ header {
     color: #fff;   
     font-size: 2rem;
     font-weight: bold;
+}
+
+/* DARKMODE MOBILE */
+@media (prefers-color-scheme: dark) {
+    * {
+        --foreground: #fff;
+        --background: #000;
+        --card-background: rgb(22, 22, 22);
+        --accent-color: rgb(36, 44, 88);
+        --page-bg: rgb(0, 0, 0);
+        --page--bg: #0a0a11;
+    }
+    .card {
+        border: none;
+        box-shadow: none;
+    }
+    .images-dark {display: inline;}
+    .images-light {display: none;}
+
+}
+
+/* DESKTOP OPTIMIZED */
+@media only screen and (min-width: 768px) {
+    header, .page, .page- {
+        padding-left:  20%;
+        padding-right: 20%;
+    }
+    .images {
+        height: 20vh;
+    }
+
+
+    /* DARKMODE DESKTOP */
+@media (prefers-color-scheme: dark) {
+    * {
+        --foreground: #fff;
+        --background: #1a1b26;
+        --card-background: #414868;
+        --accent-color: #7aa2f7;
+        --page-bg: ##1a1b26;
+        --page--bg: #24283b;
+    }
+    .card, .donate-now{
+        border: none;
+        box-shadow: none;
+    }
+    .donate-now a {
+        color: var(--background);
+    }
+}
+
 }
