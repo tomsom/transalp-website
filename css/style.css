@@ -112,9 +112,9 @@ header {
     display: flex;
     flex-direction: column;
     justify-content:space-around;
-    background-color: rgb(208, 212, 226);
+    background-color: #d9dde4;
 }
-.page- {background-color: rgb(217, 223, 222);}
+.page- {background-color: #d9e0ee;}
 
 /* BOTTOM PAGE CARD STYLING */
 .card {
