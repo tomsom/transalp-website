@@ -2,13 +2,23 @@
     font-family: 'Roboto-Slab';
     src: url("../src/Roboto_Slab/RobotoSlab-VariableFont_wght.ttf") format('truetype');
   }
+
+  @font-face {
+    font-family: 'Lato';
+    src: url("../src/Lato/Lato-Regular.ttf") format('truetype');
+  }
+
+  @font-face {
+    font-family: 'Fira';
+    src: url("../src/Fira/FiraSans-Regular.ttf") format('truetype');
+  }
 * {
     margin: 0;
 }
 body {
     text-align: left;
     position: relative;
-    font-family: Roboto-Slab, Helvetica, sans-serif;
+    font-family: Lato, Helvetica, sans-serif;
     padding: 0;
     margin: 0;
     --logo-height: 50px;
