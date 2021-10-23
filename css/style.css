@@ -17,6 +17,8 @@
     --background: #fff;
     --card-background: #fff;
     --accent-color: rgb(79, 99, 212);
+    --page-bg: #e6f0f1;
+    --page--bg: #f0f4f7;
 }
 body {
     text-align: left;
@@ -112,9 +114,9 @@ header {
     display: flex;
     flex-direction: column;
     justify-content:space-around;
-    background-color: #d9dde4;
+    background-color: var(--page-bg);
 }
-.page- {background-color: #d9e0ee;}
+.page- {background-color:var(--page--bg);}
 
 /* BOTTOM PAGE CARD STYLING */
 .card {
