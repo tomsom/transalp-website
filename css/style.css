@@ -99,7 +99,7 @@ header {
 .title {
     text-align: center;
     padding: 0 2rem;
-    height: 90vh;
+    height: 82vh;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
