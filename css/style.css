@@ -16,8 +16,9 @@
     --logo-height: 50px;
     --foreground: #000;
     --background: #fff;
-    --card-background: #fff;
-    --accent-color: rgb(79, 99, 212);
+    --card-background: rgb(119, 175, 197);
+    --accent-color: rgb(168, 205, 236);
+    --highlight-color: rgb(230, 141, 57);
     --page-bg: #fff;
     --page--bg: #f0f4f7;
 
@@ -75,6 +76,7 @@ h6 {font-size: 1.2rem;}
 .point-list {
     display: flex;
     flex-direction: column;
+    
     padding: 0 1rem;
     margin-top: 0.5rem;
     margin-bottom: 1.5rem;
@@ -84,14 +86,11 @@ h6 {font-size: 1.2rem;}
     text-align: center;
     display: flex;
     flex-direction: column;
-    align-content: center;
-    justify-content: center;
     margin-bottom: 1.5rem;
     padding: 0.8rem;
-    border: solid;
-    border-color: var(--foreground);
-    border-width: 1px;
+    background-color: var(--accent-color);
     border-radius: var(--border-radius);
+    
 }
 
 a {
@@ -195,7 +194,7 @@ header {
     text-align: center; 
     border-radius: var(--border-radius);
     line-height: 5rem;
-    background-color: var(--accent-color);
+    background-color: var(--highlight-color);
     box-shadow: 1px 1px 4px #aaa;
 }
 
@@ -211,7 +210,8 @@ header {
         --foreground: #fff;
         --background: #000;
         --card-background: rgb(22, 22, 22);
-        --accent-color: rgb(36, 44, 88);
+        --accent-color: #1a1b26;
+        --highlight-color: #282f7e;
         --page-bg: rgb(0, 0, 0);
         --page--bg: #0a0a11;
     }
@@ -238,11 +238,12 @@ header {
     }
 
     .icon-li {
+        background-color: var(--background);
         display: flex;
         flex-direction: column;
         margin-bottom: 0.8rem;
         padding: 0.8rem;
-        border: none;
+        border: solid;
         border-color: var(--foreground);
         border-width: 1px;
         border-radius: var(--border-radius);
@@ -290,7 +291,7 @@ header {
         width: 300px;
         display: flex;
         flex-direction: column;
-        margin-bottom: 0.8rem;
+        margin-bottom: 1.2rem;
         padding: 0.8rem;
         border: none;
         border-color: var(--foreground);
@@ -301,7 +302,7 @@ header {
 
     .point-list {
         flex-direction: row;
-        justify-content: center;
+        justify-content: space-evenly;
         flex-wrap: wrap;
     }
 
@@ -312,16 +313,18 @@ header {
         --foreground: #fff;
         --background: #1a1b26;
         --card-background: #414868;
-        --accent-color: #7aa2f7;
+        --accent-color: #be3e17;
         --page-bg: ##1a1b26;
         --page--bg: #24283b;
     }
     .card, .donate-now{
+        background-color: var(--card-background);
         border: none;
         box-shadow: none;
     }
+    .donate-now {background-color: var(--highlight-color);}
     .donate-now a {
-        color: var(--background);
+        color: var(--foreground);
     }
 }
 
