@@ -174,7 +174,7 @@ header {
         --page-bg: rgb(0, 0, 0);
         --page--bg: #0a0a11;
     }
-    .card {
+    .card, .donate-now {
         border: none;
         box-shadow: none;
     }
