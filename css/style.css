@@ -118,7 +118,7 @@ h6 {font-size: 1.2rem;}
     height: 1rem;
     width: 1rem;
     border: solid var(--foreground) 4px;
-    border-radius: 3px;
+    border-radius: 2px;
     border-top: none;
     border-right: none;
     rotate: -45deg;
@@ -136,11 +136,12 @@ h6 {font-size: 1.2rem;}
 }
 .page-down:hover .right-angle {
     color: var(--background);
+    border-radius: 4px;
 }
 .page-down:hover {
     color: var(--background);
     border-radius: 1rem;
-    margin-bottom: -0.4rem;
+    margin-bottom: -0.5rem;
 }
 
 
@@ -190,6 +191,7 @@ p {margin: 0;}
     width: 5rem;
 }
 .images-dark {display: none;}
+.images-color {display: none;}
 .images-light {display: inline;}
 .icon-dark {display: none;}
 .icon-light {display: inline;}
@@ -354,13 +356,16 @@ header .card {margin-top: 0;}
         align-items: center;
         
     }
-    header .card {
+    header .subtitle {
         width: 30vw;
         grid-row: 2;
         grid-column: 3;
-        margin-top: 3rem;
         align-self: start;
     }
+    .images-color {display: inline;}
+    .images-dark, .images-light {display: none;}
+
+
     .vr {
         height: 70vh;
         width: 1px;
@@ -411,7 +416,7 @@ header .card {margin-top: 0;}
         margin-left: auto;
         margin-right: auto;
     }
-    .images-dark, .images-light {
+    .images-dark, .images-light, .images-color {
         height:  20vh;
         width: auto;
         grid-row: 1;
