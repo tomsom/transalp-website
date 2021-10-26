@@ -1,3 +1,34 @@
+/********
+* ISSUES:
+* ------- 
+* Cramped Header in mobile (broken in horizontal)
+* Accent + Highlight Colors (maybe more, e.g. variation rainbow style)
+* HR Weird in card in light
+* Implementation of Stages
+* Header To High in mobile (dynamic mobile browser urlbar)
+* Maybe Light Grey instead of pure white in Mobile Dark(easier on eyes)
+* Split up Style.css for better Overview
+* Clean up and Sort out CSS(also potentially unnecessary redundancy)
+* Evt Gradient for Light(BG and cards/text?)
+* For Desktop: Cards, Lists, Images etc. next to Text, not below
+* 
+********/
+
+/*
+CLASS EXPLANATION:
+- monochrome-line: currently only used for mobile dark/black theme
+    as seperator for pages instead of color difference
+-point-list: flexbox containing icon-li
+-icon-li: flexbox displaying brief arguments with an icon
+    depending on theme:
+    -mobile black: black card with bright border
+    -else: color filled card
+-icon-dark, icon-light: icon used by icon-li
+-images, images-dark, images-light: as the name says a picture,
+    may be theme specific
+
+*/
+
 /* GENERAL */
 
 @font-face {
@@ -41,6 +72,7 @@ hr {
     margin-left: auto;
     margin-right: auto;
 }
+.major-hr {width: 80%;}
 .monochrome-line {
     margin: auto;
     width: 80%;    
@@ -81,7 +113,6 @@ h6 {font-size: 1.2rem;}
 .point-list {
     display: flex;
     flex-direction: column;
-    
     padding: 0 1rem;
     margin-top: 0.5rem;
     margin-bottom: 1.5rem;
@@ -134,23 +165,25 @@ p {margin: 0;}
 header {
     opacity: 1;
     padding: 0.5rem;
-    height: 100vh;
+    height: 97vh;
     background-color: var(--background);
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
 }
+header .card {margin-top: 0;}
 
 #rig-logo {
     height: 12vh;
-    width: 12vh;    
+    width: 12vh;
+    display: none;    
 }
 
 .title {
     text-align: center;
     padding: 0 2rem;
-    height: 82vh;
+    height: 97vh;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -212,7 +245,8 @@ header {
 /* DARKMODE MOBILE */
 @media (prefers-color-scheme: dark) {
     * {
-        --foreground: #fff;
+        --foreground: rgb(173, 173, 173);
+        --middleground: #666;
         --background: #000;
         --card-background: rgb(22, 22, 22);
         --accent-color: #1a1b26;
@@ -222,13 +256,22 @@ header {
         --page--bg: #000;
     }
 
+    h5 {
+        padding: 0.5rem;
+        margin: 0 1rem;
+        border-radius: var(--border-radius);
+        background-color: var(--foreground);
+        color: var(--background);
+    }
+    .major-hr {display: none;}
+
     .monochrome-line {display: block;}
     .card, .donate-now {
         background-color: var(--background);
         box-shadow: none;
         padding: 0.8rem;
         border: solid;
-        border-color: var(--foreground);
+        border-color: var(--middleground);
         border-width: 1px;
         border-radius: var(--border-radius);
     }
@@ -252,7 +295,7 @@ header {
         margin-bottom: 0.8rem;
         padding: 0.8rem;
         border: solid;
-        border-color: var(--foreground);
+        border-color: var(--middleground);
         border-width: 1px;
         border-radius: var(--border-radius);
     }
@@ -268,6 +311,13 @@ header {
         padding-left:  20%;
         padding-right: 20%;
     }
+    h5 {
+        padding: 0;
+        color: var(--foreground);
+        background-color: transparent;
+    }
+    #rig-logo {display: inline;}
+    .major-hr {display: block;}
 
     .monochrome-line {display: none;}
 
@@ -327,15 +377,15 @@ header {
         --page-bg: ##1a1b26;
         --page--bg: #24283b;
     }
+
     .card, .donate-now{
         background-color: var(--card-background);
         border: none;
         box-shadow: none;
     }
+
     .donate-now {background-color: var(--highlight-color);}
-    .donate-now a {
-        color: var(--foreground);
-    }
+    .donate-now a {color: var(--foreground);}
 }
 
 }
