@@ -293,6 +293,7 @@ input {height: 0;width: 0;border: none; cursor: pointer; visibility: hidden; pos
 #stage5,
 #stage6 {
     display: none;
+    height: 100vh;
 }
 
 /* TITLE */

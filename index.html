@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/style.css">
   <link rel="shortcut icon" href="src/img/favicon.png">
+  <script src="js/main.js" defer></script>
   <title>Around the World</title>
 </head>
 
@@ -403,72 +404,8 @@
 
 </body>
 </html>
-<script>
-  // Immediately-invoked function expression
-(function() {
-  // Load the script
-  const script = document.createElement("script");
-  script.src = 'https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js';
-  script.type = 'text/javascript';
-  script.addEventListener('load', () => {
-    console.log(`jQuery ${$.fn.jquery} has been loaded successfully!`);
-    // use jQuery below
 
 
-$(document).ready(function () {
-
-var menu = $('.stage-lines');
-var origOffsetY = menu.offset().top;
-
-function scroll() {
-    if ($(window).scrollTop() >= origOffsetY) {
-        $('.stage-lines').addClass('sticky');
-        console.log("STICK IT");
-        //$('.content').addClass('menu-padding');
-    } else {
-        $('.stage-lines').removeClass('sticky');
-        console.log("desticked");
-       // $('.content').removeClass('menu-padding');
-    }
-
-
-}
-
-document.onscroll = scroll;
-
-});
-  });
-  document.head.appendChild(script);
-})();
-
-
-    function st1(int) {
-      const btn = [];
-      const stg = [];
-      const s = document.querySelector("*");
-      const vars = getComputedStyle(s);
-
-      for (let i = 1; i < 7; i++) {
-      
-      btn[i] = document.querySelector("#btn-s"+i);
-      btn[i].style.color = vars.getPropertyValue('--foreground')
-      stg[i] = document.querySelector("#stage"+i);
-      stg[i].style.display = "none";
-      console.log(i);
-      console.log(btn[i]);
-      //const stg = [];
-      //stg[i]
-    }
-
-    console.log("INT is: "+int);
-    console.log("BTN is: "+btn[1]);
-
-      btn[int].style.color = "#f00";
-      stg[int].style.display = "inline";
-    }
-
-    
-</script>
 <!--
 Ä	A Umlaut	&Auml;	&#196;
 ä	a Umlaut	&auml;	&#228;
