@@ -1,166 +1,42 @@
-<!DOCTYPE html>
-<html lang="de">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="shortcut icon" href="src/img/favicon.png">
-  <title>Around the World</title>
-</head>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
 
-<body>
-  <!-- HEADER -->
-  <header>
-    <img id="rig-logo" src="src/img/rig-logo.svg" alt="RIG-Logo">
-      <div id="title">
-        <p>Riemenschneider Gymnasium W&uuml;rzburg:                                             </p>
-        <hr class="full-hr">
-        <h1>P-Seminar Transalp</h1>
-      </div>
-      <div class="vr"></div>
-      <img  src="src/img/atw-b.svg" alt="Bild der Erde" class="images-light">
-      <img  src="src/img/atw-w.svg" alt="Bild der Erde" class="images-dark">
-      <img  src="src/img/atw-c.svg" alt="Bild der Erde" class="images-color">
-      <div class="subtitle" >
-        <p>Spendenaktion zur Anschaffung von Transportfahrr&auml;dern in Entwicklungsl&auml;ndern</p>
-        <hr class="full-hr">
-        <h1>Around the World</h1>
-      </div>
-      <button class="page-down" onclick="window.location.href='#1';"><div class="right-angle"></div></button>
-  </header>
-
-  <!-- CONTENT-->
-  <article>
-    <!-- WIESO -->
-    <hr class="monochrome-line">
-    <section class="page-" id="1">
-     <h3>Wieso sollten Menschen in Entwicklungsl&auml;ndern ausgerechnet mit Fahrr&auml;dern unterst&uuml;tzt werden?</h3>
-     <h5>&#10132; Fahrr&auml;der erh&ouml;hen die Mobilit&auml;t der Menschen:</h5> <hr class="major-hr">
-     <div class="point-list">
-      <div class="icon-li">
-        <img src="src/ico/school_b.svg" alt="-" class="icon-light">
-        <img src="src/ico/school_w.svg" alt="-" class="icon-dark">
-        <p>Sch&uuml;ler:innen wird der Weg zur Schule erleichtert</p></div>
-      <div class="icon-li">
-        <img src="src/ico/health_and_safety_b.svg" alt="-" class="icon-light">
-        <img src="src/ico/health_and_safety_w.svg" alt="-" class="icon-dark">
-        <p>&Auml;rtzt:innen und Pfleger:innen k&ouml;nnen ihre Patient:innen schneller erreichen</p></div> 
-      <div class="icon-li">
-        <img src="src/ico/store_b.svg" alt="-" class="icon-light">
-        <img src="src/ico/store_w.svg" alt="-" class="icon-dark">
-        <p>Kleinstunternehmer:innen wird z.B. einfacherer Transport erm&ouml;glicht</p></div>
-      </div>
-      <h5>&#10132; Vorteile von Fahrr&auml;dern &uuml;ber andere Mobilit&auml;tsformen:</h5> <hr class="major-hr">
-     <div class="point-list">
-       <div class="icon-li">
-        <img src="src/ico/update_b.svg" alt="-" class="icon-light">
-        <img src="src/ico/update_w.svg" alt="-" class="icon-dark">
-        <p>Schneller als zu Fu&szlig;</p></div>
-       <div class="icon-li">
-        <img src="src/ico/savings_b.svg" alt="-" class="icon-light">
-        <img src="src/ico/savings_w.svg" alt="-" class="icon-dark">
-        <p>Vergleichsweise kosteng&uuml;nstig in der Anschaffung</p></div>
-       <div class="icon-li">
-        <img src="src/ico/all_inclusive_b.svg" alt="-" class="icon-light">
-        <img src="src/ico/all_inclusive_w.svg" alt="-" class="icon-dark">
-        <p>Designed um zu halten</p></div>
-       <div class="icon-li">
-        <img src="src/ico/construction_b.svg" alt="-" class="icon-light">
-        <img src="src/ico/construction_w.svg" alt="-" class="icon-dark">
-        <p>Im Falle: leicht reparierbar, auch vor Ort</p></div>
-       <div class="icon-li">
-        <img src="src/ico/credit_card_off_b.svg" alt="-" class="icon-light">
-        <img src="src/ico/credit_card_off_w.svg" alt="-" class="icon-dark">
-        <p>Keine laufenden Kosten z.B. f&uuml;r Treibstoffe</p></div>
-       </div>
-     <div class="card">
-      <h6>Durch einfacheren Zugang zu Bildung, besserer medizinischer Versorgung und Unterst&uuml;tzung lokaler Unternehmen kann Armut langfristig verringert werden.</h6>
-     </div>     
-     </section>
-
-     <!-- WBR -->
-     <hr class="monochrome-line">
-     <section class="page">
-        <img src="src/img/wbr-logo.png" alt="World Bicycle Relief" class="images">
-        <div class="bottom-margin">
-          <hr style="width: 30%;">
-           <p class="quote">
-             World Bicycle Relief stellt ihre speziell entwickelten Buffalo Bikes in Entwicklungsl&auml;ndern zur Verf&uuml;gung und sorgt vor Ort f&uuml;r Infrastruktur zur Erhaltung und Wartung der Fahrr&auml;der.
-          </p> 
-          <hr style="width: 30%;">
-        </div>
-         
-      <h5>&#10132; Deshalb wollen wir mit unserer Spendenaktion die Hilfsorganisation World Bicycle Relief unterst&uuml;tzen. </h5>
-
-      <div class="card">
-        <h3>Unser Ziel:</h3>
-        <p class="number">30.000&euro;</p>
-        <hr style="width: 30%;">
-        <p>
-          f&uuml;r die internationale Hilfsorganisation World Bicycle Relief sammeln.
-        </p>
-      </div>
-     </section>
-     
-     <!-- AROUND THE WORLD -->
-     <hr class="monochrome-line">
-    <section class="page-">
-        <h3>Arround the World</h3>
-        <p>
-          Um m&ouml;glichst viele Spenden zu sammeln haben wir es uns als Ziel gesetzt,  zusammen als Seminar insgesammt eine symbolische Weltumrundung, also in etwa
-        </p>
-        <div>
-          <p class="number">40.000km,</p>
-          <hr style="width: 30%; margin-top: 0.2rem;">
-        </div>
-        <p>
-          nur auf dem Fahrrad zur&uuml;ckzulegen. <br><br>
-          Unser Seminar besteht aus 13 Teilnehmern, wir alle fahren bis Dezember 2021 so viel Fahrrad wie m&ouml;glich, um das Ziel unserer Challenge zu erreichen.
-          <br><br> Nat&uuml;rlich sind wir daf&uuml;r auf Ihre Hilfe angewiesen. <br> Daher bitten wir Sie:
-        </p>
-        
-          <p class="donate-now">
-            <a href="https://join.worldbicyclerelief.org/Around_the_world/challenge" >Spenden Sie!</a>
-          </p>
-    </section>
-
-    <hr class="monochrome-line">
-    <section class="page">
-      <h3>Die Transalp</h3>
-      <p>
-        Alleine viele Kilometer zu fahren ist sch&ouml;n und gut, wir als Projekt-Seminar hatten uns allerdings vorgenommen noch eine Schippe drauf zu legen.
-        Daher haben wir uns entschieden, im Rahmen unserer Abitur-Fahrt mit unseren Mountainbikes einmal quer &uuml;ber die Alpen zu fahren, um zusammen so viele Kilometer wie m&ouml;glch auf einer erlebnisreichen Tour zu sammeln.
-        Wir laden Sie ein uns auf der Reise von Innsbruck bis zum Gardasee zu begleiten. 
-      </p>
-  </section>
-  <div id="dev"></div>
-  <hr class="monochrome-line">
-  <div class="stage-lines">
-    <div class="btn-array">
-      <button id="btn-s1" onclick="st1(1)">Innsbruck</button>
-      <button id="btn-s2" onclick="st1(2)""> Steinach</button>
-      <button id="btn-s3" onclick="st1(3)"">M&uuml;hlbach</button>
-      <button id="btn-s4" onclick="st1(4)"">Lavarellah&uuml;tte</button>
-      <button id="btn-s5" onclick="st1(5)"">Arraba</button>
-      <button id="btn-s6" onclick="st1(6)""><p style="font-size: inherit;">Grumes</p> <p style="font-size: inherit;">Torbole</p></button>
-    </div>
-  
-    <img src="src/img/drawing-w-ico.svg" alt="" style="width: 100%;">
-
-    <!--
-  <svg
-   width="90%"
-   height="auto"
-   viewBox="0 0 508.10934 47.8274"
+<svg
+   width="508.10934mm"
+   height="47.160492mm"
+   viewBox="0 0 508.10934 47.160492"
    version="1.1"
    id="svg5"
+   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
+   sodipodi:docname="drawing-w-place.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:svg="http://www.w3.org/2000/svg">
-   
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#505050"
+     bordercolor="#ffffff"
+     borderopacity="1"
+     inkscape:pageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="0.43942712"
+     inkscape:cx="489.2734"
+     inkscape:cy="130.85219"
+     inkscape:window-width="1920"
+     inkscape:window-height="1058"
+     inkscape:window-x="0"
+     inkscape:window-y="22"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
   <defs
      id="defs2" />
   <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
      id="layer1"
      transform="translate(143.52581,-204.01114)">
     <g
@@ -174,9 +50,7 @@
          style="fill:none;stroke:#cd1064;stroke-width:3;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          d="m 4.389671,239.73593 24.99487,-0.36656 36.93561,-10.67396 8.550229,-6.79735"
          id="path13451" />
-
       <path
-        onclick="window.location.href='#1';"
          style="fill:none;stroke:#4fe017;stroke-width:3;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          d="m -105.09863,236.10715 13.90747,-2.50501 11.6371,-11.59035 12.66879,-1.96843 22.67364,16.75371 40.97273,4.09489 7.628571,-1.15603"
          id="path13453" />
@@ -204,7 +78,8 @@
       <path
          style="fill:none;stroke:#8f3930;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.972549"
          d="m -11.449135,157.30795 3.7072765,7.59871 3.7072757,-7.59871"
-         id="path1381" />
+         id="path1381"
+         sodipodi:nodetypes="ccc" />
     </g>
     <g
        id="g15431"
@@ -217,7 +92,8 @@
       <path
          style="fill:none;stroke:#8f3930;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.972549"
          d="m -11.449135,157.30795 3.7072765,7.59871 3.7072757,-7.59871"
-         id="path15429" />
+         id="path15429"
+         sodipodi:nodetypes="ccc" />
     </g>
     <g
        id="g15437"
@@ -230,7 +106,8 @@
       <path
          style="fill:none;stroke:#8f3930;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.972549"
          d="m -11.449135,157.30795 3.7072765,7.59871 3.7072757,-7.59871"
-         id="path15435" />
+         id="path15435"
+         sodipodi:nodetypes="ccc" />
     </g>
     <g
        id="g15443"
@@ -243,7 +120,8 @@
       <path
          style="fill:none;stroke:#8f3930;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.972549"
          d="m -11.449135,157.30795 3.7072765,7.59871 3.7072757,-7.59871"
-         id="path15441" />
+         id="path15441"
+         sodipodi:nodetypes="ccc" />
     </g>
     <g
        id="g15449"
@@ -256,7 +134,8 @@
       <path
          style="fill:none;stroke:#8f3930;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.972549"
          d="m -11.449135,157.30795 3.7072765,7.59871 3.7072757,-7.59871"
-         id="path15447" />
+         id="path15447"
+         sodipodi:nodetypes="ccc" />
     </g>
     <text
        xml:space="preserve"
@@ -264,6 +143,7 @@
        x="-142.71159"
        y="233.4933"
        id="text19161"><tspan
+         sodipodi:role="line"
          id="tspan19159"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93889px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.264583"
          x="-142.71159"
@@ -274,6 +154,7 @@
        x="-115.22414"
        y="221.28693"
        id="text23359"><tspan
+         sodipodi:role="line"
          id="tspan23357"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93889px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.264583"
          x="-115.22414"
@@ -284,6 +165,7 @@
        x="-14.520644"
        y="223.66576"
        id="text25709"><tspan
+         sodipodi:role="line"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93889px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.264583"
          x="-14.520644"
          y="223.66576"
@@ -294,6 +176,7 @@
        x="56.010975"
        y="207.76353"
        id="text28063"><tspan
+         sodipodi:role="line"
          id="tspan28061"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93889px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.264583"
          x="56.010975"
@@ -304,6 +187,7 @@
        x="115.31394"
        y="213.44374"
        id="text31781"><tspan
+         sodipodi:role="line"
          id="tspan31779"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93889px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.264583"
          x="115.31394"
@@ -314,6 +198,7 @@
        x="227.32913"
        y="224.04247"
        id="text34083"><tspan
+         sodipodi:role="line"
          id="tspan34081"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93889px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.264583"
          x="227.32913"
@@ -324,177 +209,10 @@
        x="346.46475"
        y="243.41252"
        id="text37057"><tspan
+         sodipodi:role="line"
          id="tspan37055"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93889px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.264583"
          x="346.46475"
          y="243.41252">Torbole</tspan></text>
   </g>
 </svg>
--->
-  </div>
-  <section class="page-">
-    <div id="stage1">
-      <h4>Etappe 1:</h4>
-      <p class="stage-name"></p>
-      <p>L&auml;nge: XXkm</p>
-      <p>H&ouml;henmeter: Xm</p>
-      <p>Beschreibung:</p>
-      <div class=slideshow>
-      </div>
-
-    </div>
-
-    <div id="stage2">
-      <h4>Etappe 2:</h4>
-      <p class="stage-name"></p>
-      <p>L&auml;nge: XXkm</p>
-      <p>H&ouml;henmeter: Xm</p>
-      <p>Beschreibung:</p>
-      <div class=slideshow>
-      </div>
-
-    </div>
-
-    <div id="stage3">
-      <h4>Etappe 3:</h4>
-      <p class="stage-name"></p>
-      <p>L&auml;nge: XXkm</p>
-      <p>H&ouml;henmeter: Xm</p>
-      <p>Beschreibung:</p>
-      <div class=slideshow>
-      </div>
-
-    </div>
-
-    <div id="stage4">
-      <h4>Etappe 4:</h4>
-      <p class="stage-name"></p>
-      <p>L&auml;nge: XXkm</p>
-      <p>H&ouml;henmeter: Xm</p>
-      <p>Beschreibung:</p>
-      <div class=slideshow>
-      </div>
-
-    </div>
-
-    <div id="stage5">
-      <h4>Etappe 5:</h4>
-      <p class="stage-name"></p>
-      <p>L&auml;nge: XXkm</p>
-      <p>H&ouml;henmeter: Xm</p>
-      <p>Beschreibung:</p>
-      <div class=slideshow>
-      </div>
-
-    </div>
-
-    <div id="stage6">
-      <h4>Etappe 6:</h4>
-      <p class="stage-name"></p>
-      <p>L&auml;nge: XXkm</p>
-      <p>H&ouml;henmeter: Xm</p>
-      <p>Beschreibung:</p>
-      <div class=slideshow>
-      </div>
-
-    </div>
-  </section>
-  </article>
-
-</body>
-</html>
-<script>
-  // Immediately-invoked function expression
-(function() {
-  // Load the script
-  const script = document.createElement("script");
-  script.src = 'https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js';
-  script.type = 'text/javascript';
-  script.addEventListener('load', () => {
-    console.log(`jQuery ${$.fn.jquery} has been loaded successfully!`);
-    // use jQuery below
-
-
-$(document).ready(function () {
-
-var menu = $('.stage-lines');
-var origOffsetY = menu.offset().top;
-
-function scroll() {
-    if ($(window).scrollTop() >= origOffsetY) {
-        $('.stage-lines').addClass('sticky');
-        console.log("STICK IT");
-        //$('.content').addClass('menu-padding');
-    } else {
-        $('.stage-lines').removeClass('sticky');
-        console.log("desticked");
-       // $('.content').removeClass('menu-padding');
-    }
-
-
-}
-
-document.onscroll = scroll;
-
-});
-  });
-  document.head.appendChild(script);
-})();
-
-
-    function st1(int) {
-      const btn = [];
-      const stg = [];
-      const s = document.querySelector("*");
-      const vars = getComputedStyle(s);
-
-      for (let i = 1; i < 7; i++) {
-      
-      btn[i] = document.querySelector("#btn-s"+i);
-      btn[i].style.color = vars.getPropertyValue('--foreground')
-      stg[i] = document.querySelector("#stage"+i);
-      stg[i].style.display = "none";
-      console.log(i);
-      console.log(btn[i]);
-      //const stg = [];
-      //stg[i]
-    }
-
-    console.log("INT is: "+int);
-    console.log("BTN is: "+btn[1]);
-
-      btn[int].style.color = "#f00";
-      stg[int].style.display = "inline";
-    }
-
-    
-</script>
-<!--
-Ä	A Umlaut	&Auml;	&#196;
-ä	a Umlaut	&auml;	&#228;
-Ë	E Umlaut	&Euml;	&#203;
-ë	e Umlaut	&euml;	&#235;
-Ï	I Umlaut	&Iuml;	&#207;
-ï	i Umlaut	&iuml;	&#239;
-Ö	O Umlaut	&Ouml;	&#214;
-ö	o Umlaut	&ouml;	&#246;
-Ü	U Umlaut	&Uuml;	&#220;
-ü	u Umlaut	&uuml;	&#252;
-ß	Eszett	&szlig;
-
-LEGACY
-
-<section class="page">
-      <blockquote>
-        <img id="wbr-logo" src="src/img/wbr-logo.png" alt="WBR-Logo" >
-        <hr> 
-        <p class="quote">
-          World Bicycle Relief erm&ouml;glicht Menschen in l&auml;ndlichen Entwicklungsl&auml;ndern mit Fahrr&auml;dern eine gr&ouml;&szlig;ere Mobilit&auml;t.
-          In Programmen mit Schwerpunkt Afrika, für Bildung, Gesundheitswesen und wirtschaftliche Entwicklung werden spezielle Lastenfahrr&auml;der an Sch&uuml;ler,
-          Krankenpfleger und Kleinstunternehmer geliefert, um Schulen, Arbeitspl&auml;tze, Patienten und M&auml;rkte zu erreichen und so langfristig Armut reduzieren.
-        </p> 
-        <hr>
-      </blockquote>
-    </section>
-
--->

@@ -1,0 +1,7 @@
+label {
+    background-color: yellowgreen;
+}
+
+.radio input:checked ~ .pink{
+    color: pink;
+}
