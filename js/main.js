@@ -1,6 +1,28 @@
 
-  
-
+//global consts
+const s = document.querySelector("*");
+const vars = getComputedStyle(s); 
+const bk = [];
+const bt = [];
+for (let i = 1; i < 7; i++) {
+    bk[i] = document.querySelector(".ico-bk"+i);
+    bt[i] = document.getElementById('btn-s'+i);
+    bt[i].addEventListener('mouseenter', e => {
+        bk[i].style.display = "block";
+        bt[i].style.opacity = '0';
+    });
+    bt[i].addEventListener('mouseleave', e => {
+        bk[i].style.display = "none";
+        bt[i].style.opacity = vars.getPropertyValue('--inactive-btn-opacity');
+    });
+}
+/*
+const bt1 = document.getElementById('btn-s1');
+bt1.addEventListener('mouseenter', e => {
+    const bk1 = document.querySelector('.ico-bk1');
+    bk1.style.display = "block";
+} );
+/*
 // When the user scrolls the page, execute myFunction
 window.onscroll = function() {myFunction()};
 
@@ -12,35 +34,37 @@ var sticky = navbar.offsetTop;
 
 // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
 function myFunction() {
-  if (window.pageYOffset >= sticky) {
-    navbar.classList.add("sticky")
-  } else {
-    navbar.classList.remove("sticky");
-  }
+    const below_sl = document.querySelector(".below-sl");
+    if (window.pageYOffset >= sticky) {
+        navbar.classList.add("sticky");
+        below_sl.style.marginTop = vars.getPropertyValue('--sl-height');
+    } else {
+        navbar.classList.remove("sticky");
+        below_sl.style.marginTop = "0";
+    }
 } 
-  
-      function st1(int) {
-        const btn = [];
-        const stg = [];
-        const s = document.querySelector("*");
-        const vars = getComputedStyle(s);
-  
-        for (let i = 1; i < 7; i++) {
-        
+  */
+function st1(int) {
+    const btn = [];
+    const stg = [];
+
+    for (let i = 1; i < 7; i++) {
         btn[i] = document.querySelector("#btn-s"+i);
-        btn[i].style.color = vars.getPropertyValue('--foreground')
+        btn[i].style.opacity = vars.getPropertyValue('--inactive-btn-opacity');
+        btn[i].style.backgroundColor = vars.getPropertyValue('--background');
         stg[i] = document.querySelector("#stage"+i);
         stg[i].style.display = "none";
-        console.log(i);
-        console.log(btn[i]);
-        //const stg = [];
-        //stg[i]
-      }
-  
-      console.log("INT is: "+int);
-      console.log("BTN is: "+btn[1]);
-  
-        btn[int].style.color = "#f00";
-        stg[int].style.display = "inline";
-      }
+    }
+
+    console.log("INT is: "+int);
+    console.log("BTN is: "+btn[1]);
+
+    btn[int].style.opacity = "1";
+    btn[int].style.backgroundColor = "transparent";
+    stg[int].style.display = "block";
+
+
+    window.location.href = "#btn-s1";
+
+}
   

@@ -53,6 +53,8 @@ CLASS EXPLANATION:
     --logo-height: 50px;
     --page--bg: #f0f4f7;
     --page-bg: #fff;
+    --sl-height: calc(100vw * .086);
+    --inactive-btn-opacity: .6;
     margin: 0;
 }
 
@@ -200,18 +202,30 @@ p {margin: 0;}
 
 .images-dark,
 .images-color,
-.icon-dark {display: none;}
+.icon-dark,
+.img-hl-i-d {display: none;}
+
+.ico-bk1,
+.ico-bk2,
+.ico-bk3,
+.ico-bk4,
+.ico-bk5,
+.ico-bk6 {
+    display: none;
+    z-index: 4;
+    position: absolute;    
+}
 
 .images-light,
-.icon-light {display: inline;}
+.icon-light,
+.img-hl-i-l {display: block;}
 
 .bottom-margin {margin-bottom: 1.5rem;}
 
 .stage-lines {
     width: 100%;
-    height: calc(100vw * .084);
-    margin-left: auto;
-    margin-right: auto;
+    height: var(--sl-height);
+    background-color: var(--background);
 }
 
 .btn-array {
@@ -221,6 +235,25 @@ p {margin: 0;}
     display: flex;
     flex-direction: row;
     z-index: 1;
+    transition: background-image 0.6s !important;
+}
+
+.img-hl {
+    position: absolute;
+    display: block;
+    width: 100%;
+}
+
+.hl-images {
+    pointer-events: none;
+}
+
+.img-hl-i-d,
+.img-hl-i-l {
+    z-index: 3;
+    width: 100%;
+    position: absolute;
+    top: inherit;
 }
 
 input {height: 0;width: 0;border: none; cursor: pointer; visibility: hidden; position: absolute;}
@@ -241,11 +274,14 @@ input {height: 0;width: 0;border: none; cursor: pointer; visibility: hidden; pos
     height: inherit;
     border: none;
     top: 0;
-    background-color: #aaa;
-    opacity: .5;
+    background-color: var(--background);
+    color: var(--foreground);
+    opacity: var(--inactive-btn-opacity);
+    transition: background-image 0.6s !important;
+
 }
-#btn-s1 {width: 7.5% !important;}
-#btn-s2 {width: 21.6% !important;}
+#btn-s1 {width: 7.6% !important;}
+#btn-s2 {width: 21.5% !important;}
 #btn-s3 {width: 13.8% !important;}
 #btn-s4 {width: 9.9% !important;}
 #btn-s5 {width: 22.3% !important;}
@@ -255,17 +291,24 @@ input {height: 0;width: 0;border: none; cursor: pointer; visibility: hidden; pos
     justify-content: space-between;
     padding-right: 1rem;
 }
-
+/*
 #btn-s1:hover,
 #btn-s2:hover,
 #btn-s3:hover,
 #btn-s4:hover,
 #btn-s5:hover,
 #btn-s6:hover {
-    background-color: turquoise;
+    
+    z-index: 2;
+    border-left: solid;
+    border-right: solid;
+    border-color: var(--card-background);
+    border-width: 0.5rem;
+    border-radius: 0.5rem;
+
 }
 
-
+*/
 #btn-s1:active ~ #stage1{
     display: none;
 }
@@ -420,10 +463,18 @@ header .card {margin-top: 0;}
     .donate-now a {color: var(--background);}
 
     .images-dark,
-    .icon-dark {display: inline;}
+    .icon-dark,
+    .img-hl-i-d {display: block;}
 
+    .ico-bk1,
+    .ico-bk2,
+    .ico-bk3,
+    .ico-bk4,
+    .ico-bk5,
+    .ico-bk6 {filter: invert(1);}
     .images-light,
-    .icon-light {display: none;}
+    .icon-light,
+    .img-hl-i-l{display: none;}
 
     .icon-dark,
     .icon-light {

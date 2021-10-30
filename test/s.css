@@ -5,3 +5,14 @@ label {
 .radio input:checked ~ .pink{
     color: pink;
 }
+
+#bt {
+    width: 3rem;
+    height: 4rem;
+    background-color: wheat;
+    transition-duration: .6s;
+}
+
+#bt:hover {
+    background-color: violet;
+}
