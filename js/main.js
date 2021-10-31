@@ -26,8 +26,12 @@ window.onscroll = function () {
 };
 
 function scrollRotate() {
-    let image = document.querySelector('.images-color')
+    let image = document.querySelector('.images-color');
+    let image1 = document.querySelector('.images-dark');
+    let image2 = document.querySelector('.images-light');
     image.style.transform = "rotate(" + window.pageYOffset/-8 + "deg)";
+    image1.style.transform = "rotate(" + window.pageYOffset/-8 + "deg)";
+    image2.style.transform = "rotate(" + window.pageYOffset/-8 + "deg)";
 }
 
 /*

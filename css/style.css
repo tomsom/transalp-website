@@ -70,13 +70,20 @@ body {
 
 /* BASIC FORMATTING */
 hr {
+    margin: 0.4rem;
     margin-left: auto;
     margin-right: auto;
-    margin: 0.4rem;
     width: 30%;
+    border: none;
+    border-bottom: solid;
+    border-color: var(--foreground);
 }
 
-.major-hr {width: 80%;}
+.major-hr {
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+}
 
 .monochrome-line {
     display: none;
@@ -220,6 +227,11 @@ p {margin: 0;}
 .images-light,
 .icon-light,
 .img-hl-i-l {display: block;}
+
+.icon-light {
+    filter: invert(53%) sepia(20%) saturate(926%) hue-rotate(158deg) brightness(100%) contrast(101%);
+}
+
 
 .bottom-margin {margin-bottom: 1.5rem;}
 
@@ -439,7 +451,7 @@ header .card {margin-top: 0;}
     }
 
     h5 {
-        background-color: var(--foreground);
+        background-color: #fff;
         border-radius: var(--border-radius);
         color: var(--background);
         margin: 0 1rem;
@@ -606,12 +618,7 @@ header .card {margin-top: 0;}
         text-align: center;
     }
     
-    .icon-light {
-        filter: invert(53%) sepia(20%) saturate(926%) hue-rotate(158deg) brightness(100%) contrast(101%);
-    }
-    .icon-dark {
-        filter: invert(53%) sepia(20%) saturate(726%) hue-rotate(158deg) brightness(100%) contrast(101%);
-    }
+    
 
     .card {
         margin-left: auto;
@@ -672,6 +679,10 @@ header .card {margin-top: 0;}
             --foreground: #fff;
             --page--bg: #24283b;
             --page-bg: ##1a1b26;
+        }
+
+        .icon-dark {
+            filter: invert(53%) sepia(20%) saturate(726%) hue-rotate(158deg) brightness(100%) contrast(101%);
         }
 
         .card,
