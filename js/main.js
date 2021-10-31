@@ -1,11 +1,14 @@
 
 //global consts
 const s = document.querySelector("*");
-const vars = getComputedStyle(s); 
+const vars = getComputedStyle(s);
+
+// ADD BIKE ICONS TO BUTTON ON STAGES ON HOVER
 const bk = [];
 const bt = [];
 for (let i = 1; i < 7; i++) {
     bk[i] = document.querySelector(".ico-bk"+i);
+    
     bt[i] = document.getElementById('btn-s'+i);
     bt[i].addEventListener('mouseenter', e => {
         bk[i].style.display = "block";
@@ -16,6 +19,9 @@ for (let i = 1; i < 7; i++) {
         bt[i].style.opacity = vars.getPropertyValue('--inactive-btn-opacity');
     });
 }
+
+
+
 /*
 const bt1 = document.getElementById('btn-s1');
 bt1.addEventListener('mouseenter', e => {
@@ -54,6 +60,8 @@ function st1(int) {
         btn[i].style.backgroundColor = vars.getPropertyValue('--background');
         stg[i] = document.querySelector("#stage"+i);
         stg[i].style.display = "none";
+        btn[i].style.fontWeight = "normal";
+        btn[i].style.fontSize = ".8rem";
     }
 
     console.log("INT is: "+int);
@@ -61,8 +69,12 @@ function st1(int) {
 
     btn[int].style.opacity = "1";
     btn[int].style.backgroundColor = "transparent";
-    stg[int].style.display = "block";
+    btn[int].style.fontWeight = "bolder";
+    btn[int].style.fontSize = ".9rem";
+    //btn[int].style.backgroundColor = vars.getPropertyValue('--card-background');
 
+    stg[int].style.display = "block";
+    
 
     window.location.href = "#btn-s1";
 

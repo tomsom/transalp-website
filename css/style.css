@@ -161,6 +161,7 @@ button {font-size: .8rem;}
 
 .icon-li {
     background-color: var(--accent-color);
+    background-color: transparent;
     border-radius: var(--border-radius);
     display: flex;
     flex-direction: column;
@@ -421,6 +422,8 @@ header .card {margin-top: 0;}
     font-weight: bold;
 }
 
+.stage-lines {display: none;}
+
 /* MOBILE DARK */
 @media (prefers-color-scheme: dark) {
     * {
@@ -518,6 +521,9 @@ header .card {margin-top: 0;}
         width: 30vw;
     }
 
+    .stage-lines {display: block;}
+
+
     .images-color {display: inline;}
 
     .images-dark,
@@ -532,9 +538,12 @@ header .card {margin-top: 0;}
     }
 
     h5 {
+        font-size: 1.8rem;
         background-color: transparent;
         color: var(--foreground);
         padding: 0;
+        margin-right: 0.5rem;
+        margin-left: auto;
     }
 
     #rig-logo {
@@ -561,12 +570,15 @@ header .card {margin-top: 0;}
         grid-row: 2;
     }
 
-    .major-hr {display: block;}
+    .major-hr {display: none;}
 
     .monochrome-line {display: none;}
 
     .page,
-    .page- {padding: 2rem 3%;}
+    .page- {
+        padding: 2rem 3%;
+        flex-direction: column;
+    }
 
     .images {
         height: 20vh;
@@ -594,30 +606,59 @@ header .card {margin-top: 0;}
         text-align: center;
     }
     
-    .icon-dark,
     .icon-light {
-        border-bottom: solid;
-        border-width: 1px;
-        margin: 0.4rem auto;
+        filter: invert(53%) sepia(20%) saturate(926%) hue-rotate(158deg) brightness(100%) contrast(101%);
+    }
+    .icon-dark {
+        filter: invert(53%) sepia(20%) saturate(726%) hue-rotate(158deg) brightness(100%) contrast(101%);
     }
 
+    
     .icon-li {
+        
         border-color: var(--foreground);
         border-radius: var(--border-radius);
         border-width: 1px;
+        
         border: none;
         display: flex;
         flex-direction: column;
         margin-bottom: 1.2rem;
         padding: 0.8rem;
         width: 300px;
+        height: 177px;
+        flex-basis: auto;
     }
 
-    .point-list {
+    .why, .advantages {
+        min-height: 70vh;
+        display: flex;
         flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin: 0 10%;
+        background-image: radial-gradient(rgba(96, 245, 245, 0), transparent);
+    }
+
+    
+
+
+    .point-list {
+        gap: 10px;
+        flex-grow: 2;
+        flex-direction: row;
+        max-width: 800px;
         flex-wrap: wrap;
+        
         justify-content: space-evenly;
     }
+
+    .advantages .point-list {
+        max-width: 1100px;
+        
+    }
+
+
 
 
     /* DESKTOP DARK*/
