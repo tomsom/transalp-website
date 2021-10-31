@@ -47,12 +47,13 @@ CLASS EXPLANATION:
     --accent-color: rgb(168, 205, 236);
     --background: #fff;
     --border-radius: 6px;
-    --card-background: rgb(119, 175, 197);
+    --card-background: #a6cddd;
     --foreground: #000;
     --highlight-color: rgb(230, 141, 57);
     --logo-height: 50px;
     --page--bg: #f0f4f7;
     --page-bg: #fff;
+    --shadow-color: #ccc;
     --sl-height: calc(100vw * .086);
     --inactive-btn-opacity: .6;
     margin: 0;
@@ -65,10 +66,12 @@ body {
     margin: 0;
     padding: 0;
     position: relative;
-    text-align: left;
+    text-align: center;
 }
 
 /* BASIC FORMATTING */
+p {line-height: 2rem;}
+
 hr {
     margin: 0.4rem;
     margin-left: auto;
@@ -175,6 +178,7 @@ button {font-size: .8rem;}
     margin-bottom: 1.5rem;
     padding: 0.8rem;
     text-align: center;
+    box-shadow: 3px 3px 8px 1px var(--shadow-color);
 }
 
 a {
@@ -232,6 +236,19 @@ p {margin: 0;}
     filter: invert(53%) sepia(20%) saturate(926%) hue-rotate(158deg) brightness(100%) contrast(101%);
 }
 
+.bg-sproket, .bg-disc {
+    position: absolute;
+    left: -300px;
+    display: block;
+    z-index: 1;
+    height: 70vh;
+    
+}
+.bg-disc {
+    left: auto;
+    right: -350px;
+}
+
 
 .bottom-margin {margin-bottom: 1.5rem;}
 
@@ -269,7 +286,21 @@ p {margin: 0;}
     top: inherit;
 }
 
+/*
+.why, .advantages{
 
+    background-image: url("../src/img/sproket.svg");
+    background-repeat: no-repeat;
+    background-size: 70vh;
+    background-position-x: -300px;
+}
+.advantages {
+    flex-direction: row-reverse;
+    background-image: url("../src/img/disc.svg");
+    background-position: right;
+    background-clip: unset;
+}
+*/
 input {height: 0;width: 0;border: none; cursor: pointer; visibility: hidden; position: absolute;}
 
 #btn-s1,
@@ -393,6 +424,7 @@ header .card {margin-top: 0;}
     flex-direction: column;
     justify-content:space-around;
     padding: 2rem 1rem;
+    z-index: -10;
 }
 
 .page- {background-color:var(--page--bg);}
@@ -408,6 +440,16 @@ header .card {margin-top: 0;}
     margin-top: 1.5rem;
     padding: 0.5rem;
     text-align: center;
+}
+
+.why, .advantages {
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10%;
+
 }
 
 /* BIG NUMBER STYLING */
@@ -444,11 +486,12 @@ header .card {margin-top: 0;}
         --background: #000;
         --card-background: rgb(22, 22, 22);
         --foreground: rgb(173, 173, 173);
-        --highlight-color: #282f7e;
+        --highlight-color: #994e1c;
         --middleground: #666;
         --page--bg: #000;
         --page--bg: #0a0a11;
         --page-bg: #000;
+        --shadow-color: #00000077;
     }
 
     h5 {
@@ -468,7 +511,7 @@ header .card {margin-top: 0;}
         background-color: var(--background);
         border-color: var(--middleground);
         border-radius: var(--border-radius);
-        border-width: 1px;
+        border-width: 5px;
         border: solid;
         box-shadow: none;
         padding: 0.8rem;
@@ -615,7 +658,6 @@ header .card {margin-top: 0;}
 
     p {
         font-size: 1.1rem;
-        line-height: 1.8rem;
         text-align: center;
     }
     
@@ -646,23 +688,14 @@ header .card {margin-top: 0;}
     }
 
     .why, .advantages {
+        flex-direction: row;
         min-height: 70vh;
         display: flex;
-        flex-direction: row;
         justify-content: center;
         align-items: center;
         padding: 0 10%;
-        background-image: url("../src/img/sproket.svg");
-        background-repeat: no-repeat;
-        background-size: 70vh;
-        background-position-x: -300px;
     }
-    .advantages {
-        flex-direction: row-reverse;
-        background-image: url("../src/img/disc.svg");
-        background-position: right;
-        background-clip: unset;
-    }
+    .advantages {flex-direction: row-reverse;}
 
     .wbr {
         align-items: center;
@@ -700,7 +733,32 @@ header .card {margin-top: 0;}
         width: 45%;
     }
 
-    
+    .atw {
+        background-image: url("../src/img/atw-bg.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 680px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .atw p, .atw div {
+        width: 60%;
+        margin: 2rem 2rem;
+    }
+
+    .number {
+        margin-bottom: 0.5rem !important;
+        width: auto !important;
+    }
+
+    .donate-now {
+        width: 75%;
+        font-weight: lighter;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+    }
+
 
     .point-list {
         gap: 10px;
@@ -708,6 +766,7 @@ header .card {margin-top: 0;}
         flex-direction: row;
         max-width: 800px;
         flex-wrap: wrap;
+        
         
         justify-content: space-evenly;
     }
@@ -723,7 +782,7 @@ header .card {margin-top: 0;}
         * {
             --accent-color: #be3e17;
             --background: #1a1b26;
-            --card-background: #414868;
+            --card-background: #204862;
             --foreground: #fff;
             --page--bg: #24283b;
             --page-bg: ##1a1b26;

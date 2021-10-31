@@ -29,9 +29,13 @@ function scrollRotate() {
     let image = document.querySelector('.images-color');
     let image1 = document.querySelector('.images-dark');
     let image2 = document.querySelector('.images-light');
+    let image3 = document.querySelector('.bg-sproket');
+    let image4 = document.querySelector('.bg-disc');
     image.style.transform = "rotate(" + window.pageYOffset/-8 + "deg)";
     image1.style.transform = "rotate(" + window.pageYOffset/-8 + "deg)";
     image2.style.transform = "rotate(" + window.pageYOffset/-8 + "deg)";
+    image3.style.transform = "rotate(" + window.pageYOffset/-8 + "deg)";
+    image4.style.transform = "rotate(" + window.pageYOffset/-8 + "deg)";
 }
 
 /*
