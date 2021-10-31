@@ -269,6 +269,7 @@ p {margin: 0;}
     top: inherit;
 }
 
+
 input {height: 0;width: 0;border: none; cursor: pointer; visibility: hidden; position: absolute;}
 
 #btn-s1,
@@ -588,15 +589,15 @@ header .card {margin-top: 0;}
 
     .page,
     .page- {
-        padding: 2rem 3%;
+        padding: 2rem 0;
         flex-direction: column;
     }
 
     .images {
-        height: 20vh;
+        height: auto;
         margin-left: auto;
         margin-right: auto;
-        width: auto;
+        width: 30vw;
     }
 
     .images-dark,
@@ -623,7 +624,7 @@ header .card {margin-top: 0;}
     .card {
         margin-left: auto;
         margin-right: auto;
-        padding: 1rem;
+        padding: 1rem 15%;
         width: 50%;
     }
 
@@ -650,9 +651,56 @@ header .card {margin-top: 0;}
         flex-direction: row;
         justify-content: center;
         align-items: center;
-        margin: 0 10%;
-        background-image: radial-gradient(rgba(96, 245, 245, 0), transparent);
+        padding: 0 10%;
+        background-image: url("../src/img/sproket.svg");
+        background-repeat: no-repeat;
+        background-size: 70vh;
+        background-position-x: -300px;
     }
+    .advantages {
+        flex-direction: row-reverse;
+        background-image: url("../src/img/disc.svg");
+        background-position: right;
+        background-clip: unset;
+    }
+
+    .wbr {
+        align-items: center;
+        justify-items: center;
+        display: grid;
+        grid-template-columns: 1fr 3rem 1fr;
+        grid-template-rows: 1fr 1fr;
+        justify-items: center;
+        padding-left:  2%;
+        padding-right: 2%;
+    }
+
+    .wbr .images {
+        grid-row: 1;
+        grid-column: 1;
+    }
+
+    .wbr .bottom-margin {
+        grid-row: 2;
+        grid-column: 1;
+        width: 80%;
+    }
+
+    .wbr h5 {
+        grid-row: 1;
+        grid-column: 3;
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .wbr .card {
+        grid-row: 2;
+        grid-column: 3;
+        width: 45%;
+    }
+
+    
 
     .point-list {
         gap: 10px;
