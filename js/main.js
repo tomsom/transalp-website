@@ -20,7 +20,15 @@ for (let i = 1; i < 7; i++) {
     });
 }
 
+// ROTATE ATW-LOGO ON SCROLL
+window.onscroll = function () {
+    scrollRotate();
+};
 
+function scrollRotate() {
+    let image = document.querySelector('.images-color')
+    image.style.transform = "rotate(" + window.pageYOffset/-8 + "deg)";
+}
 
 /*
 const bt1 = document.getElementById('btn-s1');
