@@ -542,6 +542,8 @@ header .card {margin-top: 0;}
         margin: 0.4rem auto;
     }
 
+    .bg-disc, .bg-sproket {filter: saturate(0) brightness(60%);}
+
     .icon-li {
         background-color: var(--background);
         border-color: var(--middleground);
@@ -791,6 +793,9 @@ header .card {margin-top: 0;}
         .icon-dark {
             filter: invert(53%) sepia(20%) saturate(726%) hue-rotate(158deg) brightness(100%) contrast(101%);
         }
+
+        .bg-disc, .bg-sproket, .bg-atw {filter: none}
+
 
         .card,
         .donate-now{
