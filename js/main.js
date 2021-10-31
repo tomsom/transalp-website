@@ -34,8 +34,8 @@ function scrollRotate() {
     image.style.transform = "rotate(" + window.pageYOffset/-8 + "deg)";
     image1.style.transform = "rotate(" + window.pageYOffset/-8 + "deg)";
     image2.style.transform = "rotate(" + window.pageYOffset/-8 + "deg)";
-    image3.style.transform = "rotate(" + window.pageYOffset/-8 + "deg)";
-    image4.style.transform = "rotate(" + window.pageYOffset/-8 + "deg)";
+    //image3.style.transform = "rotate(" + window.pageYOffset/-18 + "deg)";
+    //image4.style.transform = "rotate(" + window.pageYOffset/-18 + "deg)";
 }
 
 /*
