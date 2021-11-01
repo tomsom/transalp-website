@@ -3,14 +3,11 @@
 * ------- 
 * Cramped Header in mobile (broken in horizontal)
 * Accent + Highlight Colors (maybe more, e.g. variation rainbow style)
-* HR Weird in card in light
 * Implementation of Stages
 * Header To High in mobile (dynamic mobile browser urlbar)
-* Maybe Light Grey instead of pure white in Mobile Dark(easier on eyes)
 * Split up Style.css for better Overview
 * Clean up and Sort out CSS(also potentially unnecessary redundancy)
 * Evt Gradient for Light(BG and cards/text?)
-* For Desktop: Cards, Lists, Images etc. next to Text, not below
 * 
 ********/
 
@@ -251,7 +248,12 @@ p {margin: 0;}
 
 .bottom-margin {margin-bottom: 1.5rem;}
 
+.transalp {
+    height: 100vh;
+}
+
 .stage-lines {
+    padding-top: 1rem;
     width: 100%;
     height: var(--sl-height);
     background-color: var(--background);
@@ -373,6 +375,8 @@ input {height: 0;width: 0;border: none; cursor: pointer; visibility: hidden; pos
     top:0;
 }
 
+
+/* SLIDESHOW */
 #stage1,
 #stage2,
 #stage3,
@@ -381,7 +385,80 @@ input {height: 0;width: 0;border: none; cursor: pointer; visibility: hidden; pos
 #stage6 {
     display: none;
     height: 100vh;
+    flex-direction: row;
+    flex-direction: column-reverse;
+    text-align: left;
+    padding: 2rem;
+    gap: 1rem;
 }
+
+
+.stage-data p {text-align: left; line-height: 2.5rem;}
+
+.trnslp-text{display: none;}
+#stage1 {display: flex;}
+
+.slideshow {
+    position: relative;
+    display: block;
+    background-color: black;
+    width: 80vw;
+    width: 100%;
+    height: 60vh;
+}
+.s1ss {
+    display: none;
+    height: 60vh;
+    width: 100%;
+    width: auto;
+    max-width: 80vw;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.is-button {display: none;}
+.dot-holder {
+    position: absolute;
+    bottom: 0;
+    width: 300px;
+    text-align: center;
+    right: 50%;
+    margin-right: -150px;
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbbbbb99;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.4s ease;
+  }
+
+  .active, .dot:hover {
+    background-color: #717171;
+  }
+  
+  /* Fading animation */
+  .fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @-webkit-keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+  
+  @keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+
 
 /* TITLE */
 header {
@@ -422,9 +499,10 @@ header .card {margin-top: 0;}
     display: flex;
     flex-direction: column;
     justify-content:space-around;
-    padding: 2rem 1rem;
+    padding: 0 1rem;
     z-index: -10;
     overflow: hidden;
+    padding-top: 3rem;
 }
 
 .page- {background-color:var(--page--bg);}
@@ -634,8 +712,9 @@ header .card {margin-top: 0;}
 
     .page,
     .page- {
-        padding: 2rem 0;
+        padding: 0 0;
         flex-direction: column;
+        padding-top: 3rem;
     }
 
     .images {
@@ -777,6 +856,38 @@ header .card {margin-top: 0;}
         max-width: 1100px;
         
     }
+
+    /* SLIDESHOW */
+    #stage1 {
+        flex-direction: row;
+    }
+    .slideshow {width: 80vw;}
+    .ss1s {width: 80vw;}
+    .is-button {
+        display: block;
+        cursor: pointer;
+        position: absolute;
+        top: 0;
+        width: auto;
+        padding: 1rem;
+        color: white;
+        font-weight: bold;
+        font-size: 1.5rem;
+        transition: 0.4s ease-in-out;
+        user-select: none;
+        height: inherit;
+        background-color: transparent;
+        border: none;
+    }
+    
+    .bt-right {right: 0;}
+    
+    .bt-left:hover, .bt-right:hover {
+        transform: translateX(-9px);
+        font-size: 2rem;
+    }
+    
+    .bt-right:hover {transform: translateX(9px);}
 
 
     /* DESKTOP DARK*/
