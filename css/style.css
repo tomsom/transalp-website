@@ -252,6 +252,20 @@ p {margin: 0;}
     height: 100vh;
 }
 
+.trnslp-text {
+    position: relative;
+    padding: 10% 10%;
+    height: 70vh;
+}
+
+
+.click-here {
+    position: absolute;
+    top: 0;
+    left: 4rem;
+    margin-bottom: 20vh;
+}
+
 .stage-lines {
     padding-top: 1rem;
     width: 100%;
@@ -385,10 +399,9 @@ input {height: 0;width: 0;border: none; cursor: pointer; visibility: hidden; pos
 #stage6 {
     display: none;
     height: 100vh;
-    flex-direction: row;
     flex-direction: column-reverse;
     text-align: left;
-    padding: 2rem;
+    justify-content: flex-end;
     gap: 1rem;
 }
 
@@ -399,16 +412,17 @@ input {height: 0;width: 0;border: none; cursor: pointer; visibility: hidden; pos
 #stage1 {display: flex;}
 
 .slideshow {
+    margin-top: 1rem;
     position: relative;
     display: block;
     background-color: black;
-    width: 80vw;
     width: 100%;
-    height: 60vh;
+    height: 20vh;
 }
+
 .s1ss {
     display: none;
-    height: 60vh;
+    height: 20vh;
     width: 100%;
     width: auto;
     max-width: 80vw;
@@ -860,9 +874,13 @@ header .card {margin-top: 0;}
     /* SLIDESHOW */
     #stage1 {
         flex-direction: row;
+        margin: 0 2%;
     }
-    .slideshow {width: 80vw;}
-    .ss1s {width: 80vw;}
+    .slideshow {width: 80vw; height: 60vh;}
+    .s1ss {
+        width: 80vw;
+        height: 60vh;
+    }
     .is-button {
         display: block;
         cursor: pointer;
