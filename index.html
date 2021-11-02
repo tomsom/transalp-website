@@ -11,8 +11,9 @@
 </head>
 
 <body>
+  <div id="page-start"></div>
   <!-- HEADER -->
-  <header>
+  <header>  
     <img id="rig-logo" src="src/img/rig-logo.svg" alt="RIG-Logo">
       <div id="title">
         <p>Riemenschneider Gymnasium W&uuml;rzburg:                                             </p>
@@ -21,7 +22,6 @@
       </div>
       <div class="vr"></div>
       <img  src="src/img/atw-b.svg" alt="Bild der Erde" class="images-light">
-      <img  src="src/img/atw-w.svg" alt="Bild der Erde" class="images-dark">
       <img  src="src/img/atw-c.svg" alt="Bild der Erde" class="images-color">
       <div class="subtitle" >
         <p>Spendenaktion zur Anschaffung von Transportfahrr&auml;dern in Entwicklungsl&auml;ndern</p>
@@ -31,12 +31,21 @@
       <button class="page-down" onclick="window.location.href='#1';"><div class="right-angle"></div></button>
   </header>
 
+
   <!-- CONTENT-->
-  <article>
+  <main>
+    <div id="topbar">
+      <h3 id="t-why">Wieso sollten Menschen in Entwicklungsl&auml;ndern ausgerechnet mit Fahrr&auml;dern unterst&uuml;tzt werden?</h3>
+      <h3 id="t-wbr">World Bicycle Relief</h3>
+      <h3 id="t-atw">Around the World</h3>
+      <div id="t-tra"></div>
+
+    </div>
+
     <!-- WIESO -->
     <hr class="monochrome-line">
     <section class="page-" id="1">
-      <h3>Wieso sollten Menschen in Entwicklungsl&auml;ndern ausgerechnet mit Fahrr&auml;dern unterst&uuml;tzt werden?</h3>
+      <!-- <h3>Wieso sollten Menschen in Entwicklungsl&auml;ndern ausgerechnet mit Fahrr&auml;dern unterst&uuml;tzt werden?</h3> -->
       <div class="why">
           <img src="src/img/sproket.svg" alt="" class="bg-sproket">
         
@@ -145,10 +154,16 @@
       </div>
     </section>
 
-    <hr class="monochrome-line">
     <section class="page">
+      <div id="dev"></div>
+
+      <!-- TRANSALP BOTTOM FULL VH SECTION -->
       <div class="transalp">
+
+        <!-- STAGE LINES AT TOP CLICKABLE[DESKTOP] -->
         <div class="stage-lines">
+
+          <!-- BUTTONS LABELED -->
           <div class="btn-array">
             <button id="btn-s1" onclick="st1(1)">Innsbruck</button>
             <button id="btn-s2" onclick="st1(2)">Steinach</button>
@@ -157,11 +172,11 @@
             <button id="btn-s5" onclick="st1(5)">Arraba</button>
             <button id="btn-s6" onclick="st1(6)"><p style="font-size: inherit;">Grumes </p> <p style="font-size: inherit;">Torbole</p></button>
           </div>
-    
+          
+          <!-- INDIVIDUAL BIKE ICONS ON HOVER -->
           <div class="hl-images">
             <img src="src/img/hl.svg" alt="" style="width: 100%;" class="img-hl">
             <img src="src/img/hl-ico-b.svg" alt="" style="width: 100%;" class="img-hl-i-l">
-            <img src="src/img/hl-ico-w.svg" alt="" style="width: 100%;" class="img-hl-i-d">
             <img src="src/img/bk-s1.svg" alt="" style="width: 100%;" class="ico-bk1">
             <img src="src/img/bk-s2.svg" alt="" style="width: 100%;" class="ico-bk2">
             <img src="src/img/bk-s3.svg" alt="" style="width: 100%;" class="ico-bk3">
@@ -170,117 +185,89 @@
             <img src="src/img/bk-s6.svg" alt="" style="width: 100%;" class="ico-bk6">
           </div>
         </div>
+
+        <!-- TRANSALP INFO, SHOWN BY DEFAULT -->
         <div class="trnslp-text">
           <div class="click-here"><img src="src/img/arrow.svg" class="arrow" alt="^--" style="width: 2rem;">Clicke hier, um unsere Etappen anzusehen!</div>
           <h3>Die Transalp</h3>
-        <p>
-          Alleine viele Kilometer zu fahren ist sch&ouml;n und gut, wir als Projekt-Seminar hatten uns allerdings vorgenommen noch eine Schippe drauf zu legen.
-          Daher haben wir uns entschieden, im Rahmen unserer Abitur-Fahrt mit unseren Mountainbikes einmal quer &uuml;ber die Alpen zu fahren, um zusammen so viele Kilometer wie m&ouml;glch auf einer erlebnisreichen Tour zu sammeln.
-          Wir laden Sie ein uns auf der Reise von Innsbruck bis zum Gardasee zu begleiten. 
-        </p>
+          <p>
+            Alleine viele Kilometer zu fahren ist sch&ouml;n und gut, wir als Projekt-Seminar hatten uns allerdings vorgenommen noch eine Schippe drauf zu legen.
+            Daher haben wir uns entschieden, im Rahmen unserer Abitur-Fahrt mit unseren Mountainbikes einmal quer &uuml;ber die Alpen zu fahren, um zusammen so viele Kilometer wie m&ouml;glch auf einer erlebnisreichen Tour zu sammeln.
+            Wir laden Sie ein uns auf der Reise von Innsbruck bis zum Gardasee zu begleiten. 
+          </p>
         </div>
-        
-   
-      <div id="dev"></div>
-      <hr class="monochrome-line">
-    
-      <div id="stage1">
-    
-          <div class="stage-data">
-            <h4>Etappe 1:</h4>
-            <p>Von Innsbruck, &Ouml;stereich</p>
-            <p>Nach Steinach am Brenner</p>
-            <p class="stage-name"></p>
-            <p>L&auml;nge: 27km</p>
-            <p>H&ouml;henmeter: 812m</p>
-            <p>Tiefenmeter: 301</p>
+
+        <!-- STAGE INFORMATION NEXT TO/BELOW SLIDESHOW -->
+        <div class="stage-info">
+          <div class="stage-name">
+            <div class="stage1"><p >Etappe 1</p></div>
+            
+            <p class="stage2">Etappe 2</p>
+            <p class="stage3">Etappe 3</p>
+            <p class="stage4">Etappe 4</p>
+            <p class="stage5">Etappe 5</p>
+            <p class="stage6">Etappe 6</p>
+          </div>
+
+          <div class="stage-labels">
+            <p>Von:</p>
+            <p>Nach:</p>
+            <p>L&auml;nge:</p>
+            <p>H&ouml;henmeter:</p>
+            <p>Tiefenmeter:</p>
             <p>Beschreibung:</p>
-          
-          
           </div>
-            <div class=slideshow>
-              <img src="src/img/1.jpeg" class="s1ss" alt="">
-              <img src="src/img/2.jpeg" class="s1ss" alt="">
-              <img src="src/img/3.jpeg" class="s1ss" alt="">
-              <img src="src/img/4.jpeg" class="s1ss" alt="">
-              <img src="src/img/5.jpeg" class="s1ss" alt="">
-
-              <button class="is-button bt-right" onclick="plusSlides(+1)">&#10095;</button>
-              <button class="is-button bt-left" onclick="plusSlides(-1)">&#10094;</button>
-
-              <div class="dot-holder">
-                <span class="dot" onclick="currentSlide(1)"></span>
-                <span class="dot" onclick="currentSlide(2)"></span>
-                <span class="dot" onclick="currentSlide(3)"></span>
-                <span class="dot" onclick="currentSlide(4)"></span>
-                <span class="dot" onclick="currentSlide(5)"></span>
-              </div>
+          <div class="stage-data">
+            <!-- FROM              TO             LENGHT       CLIMB       DESCENT -->
+            <div class="stage1">
+              <p>Innsbruck</p> <p>Steinach</p> <p>27 km</p> <p>812</p> <p>301</p >
             </div>
-          </div>
-    
-        <div id="stage2">
-          <h4>Etappe 2:</h4>
-          <p class="stage-name"></p>
-          <p>L&auml;nge: XXkm</p>
-          <p>H&ouml;henmeter: Xm</p>
-          <p>Beschreibung:</p>
-          <div class=slideshow>
-          </div>
-    
-        </div>
-    
-        <div id="stage3">
-          <h4>Etappe 3:</h4>
-          <p class="stage-name"></p>
-          <p>L&auml;nge: XXkm</p>
-          <p>H&ouml;henmeter: Xm</p>
-          <p>Beschreibung:</p>
-          <div class=slideshow>
-          </div>
-    
-        </div>
-    
-        <div id="stage4">
-          <h4>Etappe 4:</h4>
-          <p class="stage-name"></p>
-          <p>L&auml;nge: XXkm</p>
-          <p>H&ouml;henmeter: Xm</p>
-          <p>Beschreibung:</p>
-          <div class=slideshow>
-          </div>
-    
-        </div>
-    
-        <div id="stage5">
-          <h4>Etappe 5:</h4>
-          <p class="stage-name"></p>
-          <p>L&auml;nge: XXkm</p>
-          <p>H&ouml;henmeter: Xm</p>
-          <p>Beschreibung:</p>
-          <div class=slideshow>
-          </div>
-    
-        </div>
-    
-        <div id="stage6">
-          <h4>Etappe 6:</h4>
-          <p class="stage-name"></p>
-          <p>L&auml;nge: XXkm</p>
-          <p>H&ouml;henmeter: Xm</p>
-          <p>Beschreibung:</p>
-          <div class=slideshow>
-          </div>
-    
+            <div class="stage2">
+              <p>Steinach</p> <p>M&uuml;hlbach</p> <p>50 km</p> <p>1672</p> <p>1948</p>
+            </div>
+            <div class="stage3">
+              <p>M&uuml;hlbach</p> <p>Lavarellah&uuml;tte</p> <p>50 km</p> <p>1491</p> <p>250</p>
+            </div>
+            <div class="stage4">
+              <p>Lavarellah&uuml;tte</p> <p>Arabba</p> <p>35 km</p> <p>1090</p> <p>1494</p>
+            </div>
         </div>
 
-        <div class="footer">
-          by tomsom
-        </div>
-      </div>
-      
+          <div class="stage-descr">
+            Holla die Waldfee
 
-  </section>
-  </article>
+          </div>
+
+        </div>
+
+        <!-- SLIDESHOW -->
+        <div class=slideshow>
+          <!-- IMAGES BY STAGE -->
+          <img src="src/img/1.jpeg" class="s1ss" alt="">
+          <img src="src/img/2.jpeg" class="s1ss" alt="">
+          <img src="src/img/3.jpeg" class="s1ss" alt="">
+          <img src="src/img/4.jpeg" class="s1ss" alt="">
+          <img src="src/img/5.jpeg" class="s1ss" alt="">
+          <!-- NEXT/PREV BUTTONS -->
+          <button class="is-button bt-right" onclick="plusSlides(+1)">&#10095;</button>
+          <button class="is-button bt-left" onclick="plusSlides(-1)">&#10094;</button>
+          <!-- INDICATORS -->
+          <div class="dot-holder">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+            <span class="dot" onclick="currentSlide(5)"></span>
+          </div>
+        </div>
+  
+    </section>
+  </main>
+  <footer>
+    <a href="#page-start"> Zum Seitenanfang</a>
+    <a href="">Impressum</a>
+    <a href="https://github.com/tomsom">by tomsom<img src="src/img/gh-mark.png" alt=""></a>
+  </footer>
 
 
 </body>
