@@ -46,6 +46,7 @@ CLASS EXPLANATION:
     --border-radius: 6px;
     --card-background: #a6cddd;
     --foreground: #000;
+    --middleground: #0f0
     --highlight-color: rgb(230, 141, 57);
     --logo-height: 50px;
     --page--bg: #f0f4f7;
@@ -575,19 +576,19 @@ footer a {font-size: .9rem; display: inline-flex; align-items: center;}
         --accent-color: #1a1b26;
         --background: #000;
         --card-background: rgb(22, 22, 22);
-        --foreground: rgb(173, 173, 173);
+        --foreground: rgb(187, 185, 185);
+        --foreground: #d8d8d8;
         --highlight-color: #994e1c;
-        --middleground: #666;
+        --middleground: rgb(51, 51, 51);
         --page--bg: #000;
-        --page--bg: #0a0a11;
         --page-bg: #000;
         --shadow-color: #00000077;
     }
 
     h5 {
-        background-color: #fff;
+        /* background-color: #fff; */
         border-radius: var(--border-radius);
-        color: var(--background);
+        /* color: var(--background); */
         margin: 0 1rem;
         padding: 0.5rem;
     }
@@ -605,10 +606,10 @@ footer a {font-size: .9rem; display: inline-flex; align-items: center;}
     .card,
     .donate-now {
         background-color: var(--background);
+        border: solid;
         border-color: var(--middleground);
         border-radius: var(--border-radius);
         border-width: 5px;
-        border: solid;
         box-shadow: none;
         padding: 0.8rem;
     }
@@ -642,10 +643,10 @@ footer a {font-size: .9rem; display: inline-flex; align-items: center;}
 
     .icon-li {
         background-color: #00000077;
-        border-color: var(--middleground);
+        border: solid;
         border-radius: var(--border-radius);
         border-width: 1px;
-        border: solid;
+        border-color: var(--middleground);
         display: flex;
         flex-direction: column;
         margin-bottom: 0.8rem;
