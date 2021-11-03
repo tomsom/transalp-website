@@ -71,7 +71,11 @@ function topbarTitle() {
 
     switch (true) {
         case (x >= tra_a):
-            navbar.style.display = "none";
+
+            navbar.style.transformOrigin = "top";
+            navbar.style.transition = "all .3s";
+            navbar.style.transform = "translateY(-3rem)";
+            shown = "tra";
             break;
 
         case (x >= atw_a):
@@ -87,7 +91,14 @@ function topbarTitle() {
                 document.getElementById("t-wbr").style.transform = ("scale(1, 0) skew(-30deg)");
 
                 shown = "atw";
-            } 
+            }
+            if(shown == "tra") {
+                navbar.style.transformOrigin = "top";
+                navbar.style.transition = "all .3s";
+                navbar.style.transform = "translateY(0)";
+
+                shown = "atw";
+            }
             break;
 
         case(x >= wbr_a):
