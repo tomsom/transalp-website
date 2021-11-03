@@ -30,7 +30,7 @@ for (let i = 1; i < 7; i++) {
 // CHECK FOR TOPBAR UPDATE
 window.onscroll = function () {
     scrollRotate();
-    myFunction();
+    topbarTitle();
 };
 
 function scrollRotate() {
@@ -54,25 +54,27 @@ var wbr_a = document.querySelector(".wbr").offsetTop;
 var atw_a = document.querySelector(".atw").offsetTop;
 var tra_a = document.querySelector(".donate-now").offsetTop;
 
+// Position in page
 var shown = "header";
 
-
+// Prepare lower titles for animation
 document.getElementById("t-wbr").style.transition = "all 0s";
 document.getElementById("t-wbr").style.transform = ("scale(1, 0) skew(30deg)");
-
 document.getElementById("t-atw").style.transition = "all 0s";
 document.getElementById("t-atw").style.transform = "scale(1, 0) skew(30deg)";
 
-// Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
-function myFunction() {
-    const below_sl = document.querySelector("#topbar");
+// Shows respective title depending on scroll position in page
+// Adds "cubic" switch animation
+function topbarTitle() {
+
     var x = window.pageYOffset;
+
     switch (true) {
         case (x >= tra_a):
             navbar.style.display = "none";
             break;
-        case (x >= atw_a):
 
+        case (x >= atw_a):
             navbar.style.display = "flex";
 
             if(shown == "wbr") {
@@ -86,12 +88,9 @@ function myFunction() {
 
                 shown = "atw";
             } 
-            console.log("atw " +shown);
-
-
             break;
+
         case(x >= wbr_a):
-            
             if(shown == "why") {
                 document.getElementById("t-wbr").style.transition = "all .3s ";
                 document.getElementById("t-wbr").style.transformOrigin = "bottom";
@@ -101,6 +100,7 @@ function myFunction() {
 
                 shown = "wbr";
             }
+
             if(shown == "atw") {
                 document.getElementById("t-atw").style.transformOrigin = "bottom";
                 document.getElementById("t-atw").style.transition = "all .3s";
@@ -112,16 +112,15 @@ function myFunction() {
 
                 shown = "wbr";
             }
-            console.log("wbr "+shown);
-
             break;
+
         case (x >= why_a):
-            
             if(shown == "header") {
                 navbar.classList.add("sticky"); 
                 document.getElementById("t-why").style.display = "block";
                 shown = "why";
             }
+
             if (shown == "wbr") {
                 document.getElementById("t-wbr").style.transformOrigin = "bottom";
                 document.getElementById("t-wbr").style.transition = "all .3s";
@@ -133,29 +132,13 @@ function myFunction() {
 
                 shown = "why";
             }
-
-            console.log("why "+shown);
-            
-
             break;
+
         default:
             navbar.classList.remove("sticky");
             shown = "header";
-            // below_sl.style.marginTop = "0";
             break;
     }
-    
-    /* if (window.pageYOffset >= wbr_anker) {
-        console.log("BELOW WBR");
-        var t = document.getElementById("t-why");
-        t.style.display = "none";
-        navbar.style.backgroundColor = "#ff0000";
-    } else if (window.pageYOffset >= sticky) {
-        
-        console.log("ACTIVATED "+wbr_anker +" = " + window.pageYOffset);
-    } else {
-        
-    } */
 } 
 
 
