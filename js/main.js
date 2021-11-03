@@ -50,8 +50,8 @@ var navbar = document.querySelector("#topbar")
 
 // Get the offset positions/ankers
 var why_a = navbar.offsetTop;
-var wbr_a = document.querySelector(".wbr").offsetTop;
-var atw_a = document.querySelector(".atw").offsetTop;
+var wbr_a = document.querySelector("#wbr-a").offsetTop;
+var atw_a = document.querySelector("#atw-a").offsetTop;
 var tra_a = document.querySelector(".donate-now").offsetTop;
 
 // Position in page

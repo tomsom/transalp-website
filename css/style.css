@@ -820,7 +820,6 @@ footer a {font-size: .9rem; display: inline-flex; align-items: center;}
         border-color: var(--foreground);
         border-radius: var(--border-radius);
         border-width: 1px;
-        
         border: none;
         display: flex;
         flex-direction: column;
@@ -984,8 +983,10 @@ footer a {font-size: .9rem; display: inline-flex; align-items: center;}
             --card-background: #204862;
             --foreground: #fff;
             --page--bg: #24283b;
-            --page-bg: ##1a1b26;
+            --page-bg: #1a1b26;
         }
+
+        #topbar {background-color: var(--page--bg)}
 
         .icon-dark {
             filter: invert(53%) sepia(20%) saturate(726%) hue-rotate(158deg) brightness(100%) contrast(101%);
