@@ -3,6 +3,7 @@
 const s = document.querySelector("*");
 const vars = getComputedStyle(s);
 
+
 const transalp = document.querySelector(".trnslp-text");
 
 var last_stage = null;
@@ -32,6 +33,11 @@ window.onscroll = function () {
     scrollRotate();
     topbarTitle();
 };
+// UPDATE TOPBAR ON RESIZE
+window.onresize = (function() {
+    updateAnchors();
+  });
+
 
 function scrollRotate() {
     let image = document.querySelector(".images-color");
@@ -49,10 +55,20 @@ function scrollRotate() {
 var navbar = document.querySelector("#topbar")
 
 // Get the offset positions/ankers
-var why_a = navbar.offsetTop;
+var why_a = document.getElementById("why-a").offsetTop;
 var wbr_a = document.querySelector("#wbr-a").offsetTop;
 var atw_a = document.querySelector("#atw-a").offsetTop;
 var tra_a = document.querySelector(".donate-now").offsetTop;
+
+function updateAnchors() {
+    why_a = document.getElementById("why-a").offsetTop;
+    wbr_a = document.querySelector("#wbr-a").offsetTop;
+    atw_a = document.querySelector("#atw-a").offsetTop;
+    tra_a = document.querySelector(".donate-now").offsetTop;
+    console.log("RESIZE!");
+
+    topbarTitle();
+}
 
 // Position in page
 var shown = "header";
@@ -67,7 +83,15 @@ document.getElementById("t-atw").style.transform = "scale(1, 0) skew(30deg)";
 // Adds "cubic" switch animation
 function topbarTitle() {
 
+    // updateAnchors();
     var x = window.pageYOffset;
+/*     console.log(x);
+    console.log(shown);
+    console.log("tra: "+tra_a);
+    console.log("awt: "+atw_a);
+    console.log("wbr: "+wbr_a);
+    console.log("why: "+why_a); */
+
 
     switch (true) {
         case (x >= tra_a):
@@ -89,16 +113,15 @@ function topbarTitle() {
                 document.getElementById("t-wbr").style.transformOrigin = "top";
                 document.getElementById("t-wbr").style.transition = "all .3s";
                 document.getElementById("t-wbr").style.transform = ("scale(1, 0) skew(-30deg)");
-
-                shown = "atw";
             }
+
             if(shown == "tra") {
                 navbar.style.transformOrigin = "top";
                 navbar.style.transition = "all .3s";
                 navbar.style.transform = "translateY(0)";
-
-                shown = "atw";
             }
+
+            shown = "atw";
             break;
 
         case(x >= wbr_a):
@@ -108,8 +131,6 @@ function topbarTitle() {
                 document.getElementById("t-wbr").style.transform = ("scale(1, 1) skew(0deg)");
 
                 document.getElementById("t-why").style.transform = ("scale(1, 0) skew(-30deg)");
-
-                shown = "wbr";
             }
 
             if(shown == "atw") {
@@ -120,16 +141,15 @@ function topbarTitle() {
                 document.getElementById("t-wbr").style.transformOrigin = "top";
                 document.getElementById("t-wbr").style.transition = "all .3s";
                 document.getElementById("t-wbr").style.transform = ("scale(1, 1) skew(0deg)");
-
-                shown = "wbr";
             }
+
+            shown = "wbr";
             break;
 
         case (x >= why_a):
             if(shown == "header") {
                 navbar.classList.add("sticky"); 
                 document.getElementById("t-why").style.display = "block";
-                shown = "why";
             }
 
             if (shown == "wbr") {
@@ -140,9 +160,8 @@ function topbarTitle() {
                 document.getElementById("t-why").style.transformOrigin = "top";
                 document.getElementById("t-why").style.transition = "all .3s";
                 document.getElementById("t-why").style.transform = ("scale(1, 1) skew(0deg)");
-
-                shown = "why";
             }
+            shown = "why";
             break;
 
         default:
