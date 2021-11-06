@@ -19,6 +19,7 @@
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
+    z-index: 100;
 }
 
 .s1ss {
@@ -56,7 +57,7 @@
 }
 
 .bt-right:hover {transform: translateX(9px);}
-.dot-holder {
+#dot-holder {
     position: absolute;
     bottom: 0;
     width: 300px;

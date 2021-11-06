@@ -11,21 +11,34 @@ var last_stage = null;
 const btn = [];
 
 // ADD BIKE ICONS TO BUTTON ON STAGES ON HOVER
+const isMobile = window.matchMedia("only screen and (max-width: 760px)").matches;
+
 const bk = [];
 const bt = [];
-for (let i = 1; i < 7; i++) {
-    bk[i] = document.querySelector(".ico-bk"+i);
-    
-    bt[i] = document.getElementById("btn-s"+i);
-    bt[i].addEventListener("mouseenter", e => {
-        bk[i].style.display = "block";
-        bt[i].style.opacity = "0";
-    });
-    bt[i].addEventListener("mouseleave", e => {
-        bk[i].style.display = "none";
-        bt[i].style.opacity = vars.getPropertyValue("--inactive-btn-opacity");
-    });
+if (isMobile != true) {
+    for (let i = 1; i < 7; i++) {
+        bk[i] = document.querySelector(".ico-bk"+i);
+        
+        bt[i] = document.getElementById("btn-s"+i);
+        bt[i].addEventListener("mouseenter", e => {
+            bk[i].style.display = "block";
+            bt[i].style.opacity = "0";
+        });
+        bt[i].addEventListener("mouseleave", e => {
+            bk[i].style.display = "none";
+            bt[i].style.opacity = vars.getPropertyValue("--inactive-btn-opacity");
+        });
+    }
+} else {
+    for (let i = 1; i < 7; i++) {
+        console.log("ACTION")
+        
+        bt[i] = document.getElementById("btn-s"+i);
+        bt[i].textContent = i;
+    }
 }
+    
+
 
 // ROTATE ATW-LOGO ON SCROLL
 // CHECK FOR TOPBAR UPDATE
@@ -171,14 +184,50 @@ function topbarTitle() {
     }
 } 
 
+// SLIDESHOW //
 
+// DIV WHERE BG-IMAGE IS SET
+var picFrame = document.getElementById('pic');
+// CURRENT SLIDE/PICTURE
 var slideIndex = 1;
-showSlides(slideIndex);
+// HOLDS NAV/INDEX DOTS
+var dotHolder = document.getElementById('dot-holder');
+// DOT ARRAY
+var dots = [];
+// CURRENT STAGE SHOWN, GOT TO BE SET BY STAGE BUTONS 1-6=>0-5
+var stage = 0;
+// GIVES PICTURE COUNT PER STAGE, HARDCODED
+// Stage:       1  2  3   4   5   6
+var picCount = [5, 5, 10, 10, 10, 8];
+
+// CREATES DOTS AFTER EVERY STAGE CHANGE
+// prepareSlideshow();
+function prepareSlideshow(stg) {
+    console.log("stage: "+stg);
+  // remove all current dots
+  document.querySelectorAll('.dot').forEach(e => e.remove());
+  dots = [];
+
+  // create new dots
+  for (let i = 0; i < picCount[stg]; i++) {
+    console.log("loop:"+i)
+
+    dots[i] = document.createElement("SPAN");
+    dots[i].classList.add("dot");
+    dots[i].onclick = function() {currentSlide(i+1);}
+    dotHolder.appendChild(dots[i]);
+  }
+
+  slideIndex = 1;
+  showSlides(slideIndex);
+
+}
+
+// showSlides(slideIndex);
 
 // Next/previous controls
 function plusSlides(n) {
   showSlides(slideIndex += n);
-  
 }
 
 // Thumbnail image controls
@@ -187,24 +236,36 @@ function currentSlide(n) {
 }
 
 var timer;
-
 function showSlides(n) {
+  // prepareSlideshow(stage);
+  console.log("pc: "+picCount[stage]+"si:"+slideIndex);
   var i;
-  var slides = document.getElementsByClassName("s1ss");
-  var dots = document.getElementsByClassName("dot");
+  // var slides = document.getElementsByClassName("s1ss");
+  // var dots = document.getElementsByClassName("dot");
+   console.log("DOTS: "+dots)
 
-  if (n > slides.length) {slideIndex = 1}
 
-  if (n < 1) {slideIndex = slides.length}
+  if (n > picCount[stage]) {slideIndex = 1}
+  if (n < 1) {slideIndex = picCount[stage]}
 
-  for (i = 0; i < slides.length; i++) {
+/*   for (i = 0; i < slides.length; i++) {
       slides[i].style.display = "none";
-  }
+  } */
 
   for (i = 0; i < dots.length; i++) {
       dots[i].className = dots[i].className.replace(" active", "");
   }
-  slides[slideIndex-1].style.display = "block";
+  // slides[slideIndex-1].style.display = "block";
+
+  console.log("index"+slideIndex);
+
+  var url = "./src/img/slideshow/"+(stage+1)+slideIndex+".jpg";
+//   var url = "./src/img/"+slideIndex+".jpeg";
+  console.log("URL: "+url)
+  picFrame.style.backgroundImage = "url("+url+")";
+
+
+  console.log("si: "+slideIndex);
   dots[slideIndex-1].className += " active";
 
 
@@ -214,60 +275,7 @@ function showSlides(n) {
 
 var slideshow = document.querySelector(".slideshow");
 
-function swipedetect(el, callback){
-  
-    var touchsurface = el,
-    swipedir,
-    startX,
-    startY,
-    distX,
-    distY,
-    threshold = 150, //required min distance traveled to be considered swipe
-    restraint = 100, // maximum distance allowed at the same time in perpendicular direction
-    allowedTime = 300, // maximum time allowed to travel that distance
-    elapsedTime,
-    startTime,
-    handleswipe = callback || function(swipedir){}
-  
-    touchsurface.addEventListener("touchstart", function(e){
-        var touchobj = e.changedTouches[0]
-        swipedir = "none"
-        dist = 0
-        startX = touchobj.pageX
-        startY = touchobj.pageY
-        startTime = new Date().getTime() // record time when finger first makes contact with surface
-        e.preventDefault()
-    }, false)
-  
-    touchsurface.addEventListener("touchmove", function(e){
-        e.preventDefault() // prevent scrolling when inside DIV
-    }, false)
-  
-    touchsurface.addEventListener("touchend", function(e){
-        var touchobj = e.changedTouches[0]
-        distX = touchobj.pageX - startX // get horizontal dist traveled by finger while in contact with surface
-        distY = touchobj.pageY - startY // get vertical dist traveled by finger while in contact with surface
-        elapsedTime = new Date().getTime() - startTime // get time elapsed
-        if (elapsedTime <= allowedTime){ // first condition for awipe met
-            if (Math.abs(distX) >= threshold && Math.abs(distY) <= restraint){ // 2nd condition for horizontal swipe met
-                swipedir = (distX < 0)? "left" : "right" // if dist traveled is negative, it indicates left swipe
-            }
-            else if (Math.abs(distY) >= threshold && Math.abs(distX) <= restraint){ // 2nd condition for vertical swipe met
-                swipedir = (distY < 0)? "up" : "down" // if dist traveled is negative, it indicates up swipe
-            }
-        }
-        handleswipe(swipedir)
-        e.preventDefault()
-    }, false)
-}
-  
-//USAGE:
 
-swipedetect(slideshow, function(swipedir){
-    //swipedir contains either "none", "left", "right", "top", or "down"
-    if (swipedir =="left") {plusSlides(-1);}
-    if (swipedir == "right") {plusSlides(+1);}
-})
 
 
 function st1(int) {
@@ -283,6 +291,9 @@ function st1(int) {
     btn[int].style.backgroundColor = "transparent";
     btn[int].style.fontWeight = "bolder";
     btn[int].style.fontSize = ".9rem";
+
+    stage = int-1;
+    prepareSlideshow(stage);
     //btn[int].style.backgroundColor = vars.getPropertyValue("--card-background");
 
     // REMOVE TRANSALP TEXT IF SHOWN + SHOW SLIDESHOW AGAIN

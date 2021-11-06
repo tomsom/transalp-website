@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="shortcut icon" href="src/img/favicon.png">
   <script src="js/main.js" defer></script>
+  <!-- <script src="js/touchSwipe.js" defer></script> -->
   <title>Around the World</title>
 </head>
 
@@ -256,24 +257,29 @@
 
         <!-- SLIDESHOW -->
         <div class=slideshow>
+
+          <div id="pic"></div>
           <!-- IMAGES BY STAGE -->
-          <img src="src/img/1.jpeg" class="s1ss fade" alt="">
+<!--      <img src="src/img/1.jpeg" class="s1ss fade" alt="">
           <img src="src/img/2.jpeg" class="s1ss fade" alt="">
           <img src="src/img/3.jpeg" class="s1ss fade" alt="">
           <img src="src/img/4.jpeg" class="s1ss fade" alt="">
-          <img src="src/img/5.jpeg" class="s1ss fade" alt="">
+          <img src="src/img/5.jpeg" class="s1ss fade" alt=""> -->
           <!-- NEXT/PREV BUTTONS -->
           <button class="is-button bt-right" onclick="plusSlides(+1)">&#10095;</button>
           <button class="is-button bt-left" onclick="plusSlides(-1)">&#10094;</button>
           <!-- INDICATORS -->
-          <div class="dot-holder">
-            <span class="dot" onclick="currentSlide(1)"></span>
+          <div id="dot-holder">
+<!--             <span class="dot" onclick="currentSlide(1)"></span>
             <span class="dot" onclick="currentSlide(2)"></span>
             <span class="dot" onclick="currentSlide(3)"></span>
             <span class="dot" onclick="currentSlide(4)"></span>
-            <span class="dot" onclick="currentSlide(5)"></span>
+            <span class="dot" onclick="currentSlide(5)"></span> -->
           </div>
+          
         </div>
+        <div class="placeholder"></div>
+      </div>
   
     </section>
   </main>

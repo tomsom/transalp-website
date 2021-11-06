@@ -12,7 +12,7 @@ var dot = [];
 var stage = 1;
 
 var picCount = [5, 5, 5, 5, 5, 5];
-
+/* 
 function prepareSlideshow(stg) {
   console.log("PREP"+picCount[stg]+stg);
   stage = stg;
@@ -31,7 +31,24 @@ function prepareSlideshow(stg) {
 
   // currentSlide(1);
 }
+ */
+var dots = [];
+prepareSlideshow();
+function prepareSlideshow() {
+  // console.log("PREP"+picCount[stg]+stg);
+  dots = [];
 
+  for (let i = 0; i < 5; i++) {
+    console.log("loop:"+i)
+    dots[i] = document.createElement("SPAN");
+    dots[i].classList.add("dot");
+    dots[i].onclick = function() {currentSlide(i+1);}
+    dotHolder.appendChild(dots[i]);
+  }
+
+
+  // currentSlide(1);
+}
 
 var slideIndex = 1;
 showSlides(slideIndex);
@@ -55,11 +72,12 @@ var pic = 0;
 var timer;
 
 function showSlides(n) {
-  prepareSlideshow(stage);
-  console.log("SLIDE");
+  // prepareSlideshow(stage);
+  console.log("pc: "+picCount[stage]+"si:"+slideIndex);
   var i;
   // var slides = document.getElementsByClassName("s1ss");
-  var dots = document.getElementsByClassName("dot");
+  // var dots = document.getElementsByClassName("dot");
+   console.log("DOTS: "+dots)
 
 
   if (n > picCount[stage]) {slideIndex = 1}
@@ -77,12 +95,13 @@ function showSlides(n) {
   stage = 0;
   console.log("index"+slideIndex);
 
-  var url = "../src/img/"+stage+slideIndex+".jpeg";
+  // var url = "../src/img/"+stage+slideIndex+".jpeg";
+  var url = "../src/img/"+slideIndex+".jpeg";
   console.log("URL: "+url)
   picture.style.backgroundImage = "url("+url+")";
 
 
-
+  console.log("si: "+slideIndex);
   dots[slideIndex-1].className += " active";
 
 
