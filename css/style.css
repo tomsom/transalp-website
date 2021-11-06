@@ -1,15 +1,18 @@
-/********
-* ISSUES:
-* ------- 
-* Cramped Header in mobile (broken in horizontal)
+/************
+* ISSUES/2DO/EVT.FEATURES:
+* -----------
 * Accent + Highlight Colors (maybe more, e.g. variation rainbow style)
-* Implementation of Stages
-* Header To High in mobile (dynamic mobile browser urlbar)
-* Split up Style.css for better Overview
 * Clean up and Sort out CSS(also potentially unnecessary redundancy)
 * Evt Gradient for Light(BG and cards/text?)
-* 
-********/
+* Split up Style.css for better Overview
+*--------
+* HIGH PRIO:
+*--------
+* Slideshow
+* Topbar not displaying correctly on reload
+* Mobile header optimisation(correct height, (horizontal))
+* JS performance optimisations
+*********/
 
 /*
 CLASS EXPLANATION:
@@ -46,7 +49,7 @@ CLASS EXPLANATION:
     --border-radius: 6px;
     --card-background: #a6cddd;
     --foreground: #000;
-    --middleground: #0f0
+    --middleground: #0f0;
     --highlight-color: rgb(230, 141, 57);
     --logo-height: 50px;
     --page--bg: #f0f4f7;
@@ -517,6 +520,11 @@ header .card {margin-top: 0;}
     justify-content: center;
     align-items: center;
     padding: 1rem 10%;
+}
+
+.why-h5 {
+    position: relative;
+    z-index: 2;
 }
 
 
