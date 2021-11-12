@@ -3,6 +3,8 @@
 const s = document.querySelector("*");
 const vars = getComputedStyle(s);
 
+let rainbow = ['#be616b', '#cf876f', '#eaca8b', '#a3bd8d', '#88c0cf', '#b38ead']
+
 
 const transalp = document.querySelector(".trnslp-text");
 
@@ -201,7 +203,6 @@ var stage = 0;
 var picCount = [5, 5, 10, 10, 10, 8];
 
 // CREATES DOTS AFTER EVERY STAGE CHANGE
-// prepareSlideshow();
 function prepareSlideshow(stg) {
     console.log("stage: "+stg);
   // remove all current dots
@@ -223,8 +224,6 @@ function prepareSlideshow(stg) {
 
 }
 
-// showSlides(slideIndex);
-
 // Next/previous controls
 function plusSlides(n) {
   showSlides(slideIndex += n);
@@ -237,30 +236,23 @@ function currentSlide(n) {
 
 var timer;
 function showSlides(n) {
-  // prepareSlideshow(stage);
   console.log("pc: "+picCount[stage]+"si:"+slideIndex);
   var i;
-  // var slides = document.getElementsByClassName("s1ss");
-  // var dots = document.getElementsByClassName("dot");
+
    console.log("DOTS: "+dots)
 
 
   if (n > picCount[stage]) {slideIndex = 1}
   if (n < 1) {slideIndex = picCount[stage]}
 
-/*   for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
-  } */
 
   for (i = 0; i < dots.length; i++) {
       dots[i].className = dots[i].className.replace(" active", "");
   }
-  // slides[slideIndex-1].style.display = "block";
 
   console.log("index"+slideIndex);
 
   var url = "./src/img/slideshow/"+(stage+1)+slideIndex+".jpg";
-//   var url = "./src/img/"+slideIndex+".jpeg";
   console.log("URL: "+url)
   picFrame.style.backgroundImage = "url("+url+")";
 
@@ -276,7 +268,7 @@ function showSlides(n) {
 var slideshow = document.querySelector(".slideshow");
 
 
-
+const stageInfo = document.getElementById("stage-info");
 
 function st1(int) {
 
@@ -288,24 +280,29 @@ function st1(int) {
 
     // STYLE SELECTED STAGE BUTTON
     btn[int].style.opacity = "1";
-    btn[int].style.backgroundColor = "transparent";
     btn[int].style.fontWeight = "bolder";
     btn[int].style.fontSize = ".9rem";
+    // BG COLOR DEPENDENT ON ISMOBILE
+    btn[int].style.backgroundColor = rainbow[int-1];
+    if(isMobile ==  false) {
+        btn[int].style.backgroundColor = "transparent";
+    }
 
     stage = int-1;
     prepareSlideshow(stage);
-    //btn[int].style.backgroundColor = vars.getPropertyValue("--card-background");
 
     // REMOVE TRANSALP TEXT IF SHOWN + SHOW SLIDESHOW AGAIN
     if (last_stage == null) {
         transalp.style.display = "none";
         slideshow.style.display = "block";
+        stageInfo.style.display = "grid";
     }
 
     // ADD TRANSALP TEXT IF NO STAGE SELECTED AND REMOVE STAGE
     if (btn[int] == last_stage) {
         transalp.style.display = "block";
         slideshow.style.display = "none";
+        stageInfo.style.display = "none";
         resetStageButtons();
         btn[int] = null;
     }
@@ -325,7 +322,7 @@ function resetStageButtons() {
     for (let i = 1; i < 7; i++) {
         btn[i] = document.querySelector("#btn-s"+i);
         btn[i].style.opacity = vars.getPropertyValue("--inactive-btn-opacity");
-        btn[i].style.backgroundColor = vars.getPropertyValue("--background");
+        btn[i].style.backgroundColor = vars.getPropertyValue("--inactive-btn-bg");
         // REMOVE ALL ELEMENTS BY CLASS stageX AKA STAGE NAME, DATA AND DESCRIPTION 
         for(let o=0; o<document.querySelectorAll(".stage"+i).length; o++) {
             document.querySelectorAll(".stage"+i)[o].style.display = "none";};

@@ -56,7 +56,8 @@ CLASS EXPLANATION:
     --page-bg: #fff;
     --shadow-color: #ccc;
     --sl-height: calc(100vw * .086);
-    --inactive-btn-opacity: .6;
+    --inactive-btn-opacity: 1;
+    --inactive-btn-bg: #000;
     margin: 0;
 }
 
@@ -294,7 +295,7 @@ p {margin: 0;}
     grid-column: 1 / span 2;
     width: 100%;
     height: 5vh;
-    background-color: teal;
+    /* background-color: #666; */
 }
 
 #btn-s1,
@@ -303,44 +304,26 @@ p {margin: 0;}
 #btn-s4,
 #btn-s5,
 #btn-s6 {
-    background-color: tomato;
+    line-height: .85rem;
+    background-color: var(--inactive-btn-bg);
+    color: var(--background);
     width: 2rem ;
     height: 2rem;
     padding: .6rem;
-    border-radius: .8rem;
+    border-radius: 1rem;
     border: none;
 }
+.click-here {display: none;}
 
-/*
-#btn-s1::after,
-#btn-s2::after,
-#btn-s3::after,
-#btn-s4::after,
-#btn-s5::after,
-#btn-s6::after {
-    visibility: visible;
-    margin: 0;
-    padding: 0;
-    position: relative;
-    width: 2rem !important;
-    height: 2rem !important;
-    display: block;
-    background-color: tomato;
-    content: "X";
+#select-stage {
+    display: inline;
+    padding-right: .5rem;
 }
-#btn-s1:after {content: "1";}
-#btn-s2:after {content: "2";}
-#btn-s3:after {content: "3";}
-#btn-s4:after {content: "4";}
-#btn-s5:after {content: "5";}
-#btn-s6:after {content: "6";}
- */
-
 
 .transalp {
     height: 100vh;
     display: grid;
-    grid-template-rows: 1fr 1fr 32px;
+    grid-template-rows: 1fr 1fr 4rem;
     grid-template-columns: 276px 1fr;
     align-content: flex-start;
 
@@ -397,12 +380,14 @@ p {margin: 0;}
 .stage5,
 .stage6 {display: none;}
 
-.stage-info {
+#stage-info {
+    width: 98vw;
+
     gap: 1rem;
     grid-row: 2;
     grid-column: 1 /span 2;
     align-self: flex-start;
-    justify-self: flex-start;
+    justify-self: center;
 
     display: grid;
     grid-template-rows: 1fr, 1fr, 1fr;
@@ -451,7 +436,7 @@ p {margin: 0;}
 
 #pic {
     position: absolute;
-    width: inherit;
+    width: 100%;
     height: inherit;
     background-image: url("../src/img/4.jpeg");
     background-repeat: no-repeat;
@@ -534,15 +519,10 @@ header .card {margin-top: 0;}
     width: 12vh;
 }
 
-.title {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    height: 97vh;
-    justify-content: space-evenly;
-    padding: 0 2rem;
-    text-align: center;
+#title {
+    display: block;
 }
+
 
 
 /* ARTICE */
@@ -617,6 +597,9 @@ header .card {margin-top: 0;}
 /* .btn-array {display: none;} */
 
 footer {
+    background-color: var(--shadow-color);
+    border-radius: .6rem .6rem 0 0;
+    border-bottom: none;
     position: absolute;
     height: 1.3rem;
     width: 96%;
@@ -638,7 +621,7 @@ footer img {
 }
 footer a {font-size: .9rem; display: inline-flex; align-items: center;}
 
-footer {display: none;}
+/* footer {display: none;} */
 
 /* MOBILE DARK */
 @media (prefers-color-scheme: dark) {
@@ -653,6 +636,7 @@ footer {display: none;}
         --page--bg: #000;
         --page-bg: #000;
         --shadow-color: #00000077;
+        --inactive-btn-bg: #fff;
     }
 
     h5 {
@@ -679,7 +663,7 @@ footer {display: none;}
         border: solid;
         border-color: var(--middleground);
         border-radius: var(--border-radius);
-        border-width: 5px;
+        border-width: 1px;
         box-shadow: none;
         padding: 0.8rem;
     }
@@ -730,6 +714,10 @@ footer {display: none;}
 
 /* DESKTOP LIGHT */
 @media only screen and (min-width: 768px) {
+    * {
+        --inactive-btn-opacity: .6;
+        --inactive-btn-bg: var(--background)
+    }
     body {text-align: center;}
 
     header{
@@ -789,10 +777,13 @@ footer {display: none;}
     }
 
     #title {
+        display: grid;
         align-self: flex-start;
         grid-column: 1;
         grid-row: 2;
         width: 20vw;
+        height: auto;
+
     }
 
     .page-down {
@@ -891,6 +882,16 @@ footer {display: none;}
         padding-right: 1rem;
     }
 
+    .click-here {
+        position: absolute;
+        top: 0;
+        left: 4rem;
+        margin-bottom: 20vh;
+    }
+    
+    #select-stage {
+        display: none;
+    }
     .card {
         margin-left: auto;
         margin-right: auto;
@@ -1010,11 +1011,13 @@ footer {display: none;}
        grid-template-columns: auto 1fr;
     }
 
-    .stage-info {
+    #stage-info {
+        display: grid;
         grid-row: 2;
         grid-column: 1;
         width: 15vw;
         min-width: 276px;
+        margin-left: 2rem;
     }
 
     /* SLIDESHOW */
@@ -1033,7 +1036,8 @@ footer {display: none;}
     .slideshow {
         display: block;
         height: 100%;
-        width: 100%;
+        width: 98%;
+        margin-right: 2%;
         align-self: stretch;
         justify-self: stretch;
 
