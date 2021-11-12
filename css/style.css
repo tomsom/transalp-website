@@ -307,23 +307,18 @@ p {margin: 0;}
     line-height: .85rem;
     background-color: var(--inactive-btn-bg);
     color: var(--background);
-    width: 2rem ;
-    height: 2rem;
-    padding: .6rem;
-    border-radius: 1rem;
+    width: 3rem ;
+    height: 3rem;
+    border-radius: 3rem;
     border: none;
 }
 .click-here {display: none;}
 
-#select-stage {
-    display: inline;
-    padding-right: .5rem;
-}
 
 .transalp {
     height: 100vh;
     display: grid;
-    grid-template-rows: 1fr 1fr 4rem;
+    grid-template-rows: 1fr 1fr 6rem;
     grid-template-columns: 276px 1fr;
     align-content: flex-start;
 
@@ -337,8 +332,7 @@ p {margin: 0;}
 
 .trnslp-text {
     position: relative;
-    padding: 15% 10%;
-    height: 70vh;
+    padding: 40% 10%;
 
     grid-row: 2;
     grid-column: 1 /span 2;

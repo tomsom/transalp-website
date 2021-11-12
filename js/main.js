@@ -252,7 +252,7 @@ function showSlides(n) {
 
   console.log("index"+slideIndex);
 
-  var url = "./src/img/slideshow/"+(stage+1)+slideIndex+".jpg";
+  var url = "./src/img/slideshow/"+(stage+1)+slideIndex+".webp";
   console.log("URL: "+url)
   picFrame.style.backgroundImage = "url("+url+")";
 
