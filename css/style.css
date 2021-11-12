@@ -454,7 +454,39 @@ p {margin: 0;}
     margin-right: auto;
 } */
 
-.is-button {display: none;}
+/* .is-button {display: none;} */
+.is-button {
+    display: block;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    width: 50%;
+    color: white;
+    font-weight: bold;
+    font-size: 1.5rem;
+    transition: 0.4s ease-in-out;
+    user-select: none;
+    height: 100%;
+    background-color: transparent;
+    border: none;
+}
+
+.bt-right {
+    right: .7rem;
+    text-align: right;
+}
+.bt-left {
+    left: .7rem;
+    text-align: left;
+}
+
+.bt-left:hover, .bt-right:hover {
+    transform: translateX(-9px);
+    font-size: 2rem;
+}
+
+.bt-right:hover {transform: translateX(9px);}
+
 #dot-holder {
     position: absolute;
     bottom: 0;
@@ -668,7 +700,10 @@ footer a {font-size: .9rem; display: inline-flex; align-items: center;}
         padding: 0.8rem;
     }
 
-    .donate-now {background-color: var(--foreground);}
+    .donate-now {
+        background-color: var(--foreground);
+        border: none;
+    }
 
     .donate-now a {color: var(--background);}
 
@@ -1049,31 +1084,9 @@ footer a {font-size: .9rem; display: inline-flex; align-items: center;}
         height: 60vh;
         object-fit: fill;
     }
-    .is-button {
-        display: block;
-        cursor: pointer;
-        position: absolute;
-        top: 0;
-        width: 3rem;
-        color: white;
-        font-weight: bold;
-        font-size: 1.5rem;
-        transition: 0.4s ease-in-out;
-        user-select: none;
-        height: 100%;
-        background-color: transparent;
-        border: none;
-    }
+
     
-    .bt-right {right: .7rem;}
-    .bt-left {left: 0;}
-    
-    .bt-left:hover, .bt-right:hover {
-        transform: translateX(-9px);
-        font-size: 2rem;
-    }
-    
-    .bt-right:hover {transform: translateX(9px);}
+
 
 
     /* DESKTOP DARK*/
