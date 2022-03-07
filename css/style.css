@@ -309,7 +309,6 @@ p {margin: 0;}
     color: var(--background);
     width: 3rem ;
     height: 3rem;
-    border-radius: 3rem;
     border: none;
 }
 .click-here {display: none;}
@@ -405,12 +404,6 @@ p {margin: 0;}
     grid-column: 2;
 }
 .stage-data p {text-align: right;}
-
-.stage-descr {
-    grid-row: 3;
-    grid-column: 1 /span 2;
-}
-
 
 .trnslp-text{display: none;}
 /* #stage1 {display: grid;} */
@@ -623,7 +616,7 @@ header .card {margin-top: 0;}
 /* .btn-array {display: none;} */
 
 footer {
-    background-color: var(--shadow-color);
+    /* background-color: var(--shadow-color); */
     border-radius: .6rem .6rem 0 0;
     border-bottom: none;
     position: absolute;
