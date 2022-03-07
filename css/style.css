@@ -885,6 +885,7 @@ footer a {font-size: .9rem; display: inline-flex; align-items: center;}
     #btn-s6 {
         display: inline-flex;
         align-content: flex-start;
+        border-radius: 0xc;
         text-align: left;
         padding: 0;
         margin: 0;
