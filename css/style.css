@@ -212,7 +212,7 @@ button {font-size: .8rem;}
 }
 
 .icon-li {
-    background-color: #ffffff69;
+    background-color: #ffffffd6;
     border-radius: var(--border-radius);
     display: flex;
     flex-direction: column;
@@ -748,7 +748,7 @@ footer a {font-size: .9rem; display: inline-flex; align-items: center;}
     .bg-disc, .bg-sproket {filter: saturate(0) brightness(60%);}
 
     .icon-li {
-        background-color: #00000077;
+        background-color: #000000bf;
         border: solid;
         border-radius: var(--border-radius);
         border-width: 1px;
@@ -977,7 +977,7 @@ footer a {font-size: .9rem; display: inline-flex; align-items: center;}
         align-items: center;
         padding: 1rem 10%;
     }
-    .advantages {flex-direction: row-reverse;}
+    /* .advantages {flex-direction: row-reverse;} */
 
     .wbr {
         align-items: center;
