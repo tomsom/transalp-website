@@ -724,7 +724,6 @@ footer a {font-size: .9rem; display: inline-flex; align-items: center;}
         border-radius: var(--border-radius);
         border-width: 1px;
         box-shadow: none;
-        padding: 0.8rem;
     }
 
     .donate-now {
@@ -907,7 +906,7 @@ footer a {font-size: .9rem; display: inline-flex; align-items: center;}
         display: flex;
         flex-direction: row;
         z-index: 1;
-        transition: background-image 0.6s !important;
+        transition: background-image 0.6s ease-in-out !important;
     }
     
     #btn-s1,
@@ -987,17 +986,9 @@ footer a {font-size: .9rem; display: inline-flex; align-items: center;}
         align-items: center;
         padding: 1rem 10%;
     }
-    /* .advantages {flex-direction: row-reverse;} */
 
     .wbr {
         align-items: center;
-        /* display: grid;
-        grid-template-columns: 1fr 3rem 1fr;
-        grid-template-rows: 1fr 1fr;
-        justify-items: center;
-        padding-left:  2%;
-        padding-right: 2%;
-        padding-bottom: 4rem; */
     }
 
     .quote {
@@ -1016,31 +1007,6 @@ footer a {font-size: .9rem; display: inline-flex; align-items: center;}
     }
 
     .donation-goal h5 { line-height: 2.5rem;}
-
-    /* .wbr .images {
-        grid-row: 1;
-        grid-column: 1;
-    }
-
-    .wbr .bottom-margin {
-        grid-row: 2;
-        grid-column: 1;
-        width: 80%;
-    }
-
-    .wbr h5 {
-        grid-row: 1;
-        grid-column: 3;
-        width: 80%;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .wbr .card {
-        grid-row: 2;
-        grid-column: 3;
-        width: 45%;
-    } */
 
     .atw {
         background-image: url("../src/img/atw-bg.svg");
@@ -1066,6 +1032,7 @@ footer a {font-size: .9rem; display: inline-flex; align-items: center;}
         font-weight: lighter;
         text-transform: uppercase;
         letter-spacing: 3px;
+        padding: 0.8rem;
     }
 
 
