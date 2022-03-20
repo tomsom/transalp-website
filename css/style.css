@@ -50,7 +50,7 @@ CLASS EXPLANATION:
     --card-background: #a6cddd;
     --foreground: #000;
     --middleground: #0f0;
-    --highlight-color: rgb(230, 141, 57);
+    --highlight-color: #d6712d;
     --logo-height: 50px;
     --page--bg: #f0f4f7;
     --page-bg: #fff;
@@ -132,7 +132,7 @@ h5 {
 
 h6 {
     font-size: 1.4rem;
-    line-height: 1.8rem;
+    line-height: 2.2rem;
 }
 
 button {font-size: .8rem;}
@@ -313,6 +313,7 @@ p {margin: 0;}
     width: 3rem ;
     height: 3rem;
     border: none;
+    border-radius: 1.5rem;
 }
 .click-here {display: none;}
 
@@ -320,7 +321,7 @@ p {margin: 0;}
 .transalp {
     height: 100vh;
     display: grid;
-    grid-template-rows: 1fr 1fr 6rem;
+    grid-template-rows: 1fr 1fr 6rem 1.3rem;
     grid-template-columns: 276px 1fr;
     align-content: flex-start;
 
@@ -334,9 +335,8 @@ p {margin: 0;}
 
 .trnslp-text {
     position: relative;
-    padding: 40% 10%;
-
-    grid-row: 2;
+    padding: 10%;
+    grid-row: 1/span 2;
     grid-column: 1 /span 2;
 }
 
@@ -562,6 +562,9 @@ header .card {margin-top: 0;}
 
 .page- {background-color:var(--page--bg);}
 
+
+#last-page {padding: 0;}
+
 /* BOTTOM PAGE CARD STYLING */
 .card {
     background-color: var(--card-background);
@@ -603,6 +606,7 @@ header .card {margin-top: 0;}
     font-weight: bold;
     margin-top: 1rem;
     text-align: center;
+    display: inline;
 }
 
 /* DONATE BUTTON */
@@ -610,47 +614,20 @@ header .card {margin-top: 0;}
     background-color: var(--highlight-color);
     border-radius: var(--border-radius);
     line-height: 5rem;
-    margin: 1.5rem 1rem;
-    padding: 1rem auto;
+    margin: 2rem 1rem;
+    padding: 1rem 2rem;
     text-align: center; 
     color: #fff;   
     font-size: 2rem;
     font-weight: bold;
-    filter: blur(1px);
-    /* box-shadow: 0 1px 2px var(--shadow-color); */
     transition: all 0.3s ease-in-out;
 }
 
-.donate-now::after {
-    content: '';
-    top: 0;
-    left: 0;
-    position: absolute;
-    z-index: -1;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    border-radius: inherit;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
-    transition: opacity 0.3s ease-in-out;
-}
-
-.donate-now:hover::after {
-    opacity: 1;
-}
 
 .donate-now:hover {
-    filter: blur(0px);
-    font-size: 2.8rem;
-    transform: scale(1.05);
+    /* font-size: 2.8rem; */
+    transform: scale(1.03);
 }
-
-.donate-now:active {
-    z-index: 1000;
-    transform: scale(1000);
-}
-
-
 
 .stage-lines {display: block;}
 /* .btn-array {display: none;} */
@@ -727,7 +704,7 @@ footer a {font-size: .9rem; display: inline-flex; align-items: center;}
     }
 
     .donate-now {
-        background-color: var(--foreground);
+        background-color: var(--highlight-color);
         border: none;
     }
 
@@ -917,7 +894,7 @@ footer a {font-size: .9rem; display: inline-flex; align-items: center;}
     #btn-s6 {
         display: inline-flex;
         align-content: flex-start;
-        border-radius: 0xc;
+        border-radius: 0;
         text-align: left;
         padding: 0;
         margin: 0;
@@ -945,21 +922,23 @@ footer a {font-size: .9rem; display: inline-flex; align-items: center;}
     }
 
     .click-here {
+        display: block;
         position: absolute;
         top: 0;
         left: 4rem;
         margin-bottom: 20vh;
     }
+
+    .click-here img {margin-right: 0.3rem;}
     
     #select-stage {
         display: none;
     }
     .card {
-        margin-left: auto;
-        margin-right: auto;
-        padding: 1rem 15%;
+        margin-left: 20%;
+        margin-right: 20%;
+        padding: 1.8rem;
         margin-bottom: 4rem;
-        width: 50%;
     }
 
     
@@ -998,15 +977,10 @@ footer a {font-size: .9rem; display: inline-flex; align-items: center;}
         margin-right: 25%;
     }
 
-    .donation-goal {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        margin-left: 15vw;
-        margin-right: 15vw;
+    .quote p {
+        font-size: 1.2rem;
+        font-weight: 700;
     }
-
-    .donation-goal h5 { line-height: 2.5rem;}
 
     .atw {
         background-image: url("../src/img/atw-bg.svg");
@@ -1021,6 +995,8 @@ footer a {font-size: .9rem; display: inline-flex; align-items: center;}
         width: 60%;
         margin: 2rem 2rem;
     }
+    .atw-km p {margin: 0;}
+
 
     .number {
         margin-bottom: 0.5rem !important;
@@ -1055,6 +1031,10 @@ footer a {font-size: .9rem; display: inline-flex; align-items: center;}
     .transalp {
        grid-template-rows: var(--sl-height) 1fr 10vh 32px; 
        grid-template-columns: auto 1fr;
+    }
+
+    .trnslp-text {
+        grid-row: 2 /span 3;
     }
 
     #stage-info {
@@ -1124,12 +1104,12 @@ footer a {font-size: .9rem; display: inline-flex; align-items: center;}
 
         .card,
         .donate-now{
-            background-color: var(--card-background);
+            /* background-color: var(--card-background); */
             border: none;
             box-shadow: none;
         }
 
-        .donate-now {background-color: var(--highlight-color);}
+        /* .donate-now {background-color: var(--highlight-color);} */
         .donate-now a {color: var(--foreground);}
     }
 }

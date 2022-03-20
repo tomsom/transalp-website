@@ -10,7 +10,27 @@ const transalp = document.querySelector(".trnslp-text");
 
 var last_stage = null;
 
+var countup_activated = false;
+
 const btn = [];
+
+// ANIMATE DISTANCE COUNT-UP
+const countup = document.getElementById("num-incr");
+
+function animateValue(obj, start, end, duration) {
+    let startTimestamp = null;
+    const step = (timestamp) => {
+      if (!startTimestamp) startTimestamp = timestamp;
+      const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+      obj.innerHTML = Math.floor(progress * (end - start) + start);
+      if (progress < 1) {
+        window.requestAnimationFrame(step);
+      }
+    };
+    window.requestAnimationFrame(step);
+  }
+  
+  
 
 // ADD BIKE ICONS TO BUTTON ON STAGES ON HOVER
 const isMobile = window.matchMedia("only screen and (max-width: 760px)").matches;
@@ -44,9 +64,11 @@ if (isMobile != true) {
 
 // ROTATE ATW-LOGO ON SCROLL
 // CHECK FOR TOPBAR UPDATE
+// CHECK FOR COUNTUP ACTIVATION
 window.onscroll = function () {
     scrollRotate();
     topbarTitle();
+    activateCountup();
 };
 // UPDATE TOPBAR ON RESIZE
 window.onresize = (function() {
@@ -84,6 +106,14 @@ function updateAnchors() {
 
     topbarTitle();
 }
+
+function activateCountup() {
+    if(countup_activated == false && window.pageYOffset >= atw_a) {
+        animateValue(countup, 0, 40000, 1976);
+        countup_activated = true;
+    } 
+}
+
 
 // Position in page
 var shown = "header";
@@ -267,10 +297,16 @@ function showSlides(n) {
 
 var slideshow = document.querySelector(".slideshow");
 
-
 const stageInfo = document.getElementById("stage-info");
 
+// show only trnslp-text initially
+transalp.style.display = "block";
+slideshow.style.display = "none";
+stageInfo.style.display = "none";
+
 function st1(int) {
+
+    console.log("exec st1");
 
     resetStageButtons();    
 
