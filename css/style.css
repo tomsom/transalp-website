@@ -183,6 +183,9 @@ button {font-size: .8rem;}
 }
 
 .page-down {
+    position: absolute;
+    top: 92vh;
+    left: 1rem;
     background-color: var(--card-background);
     border-radius: 1.5rem;
     border: none;
@@ -527,11 +530,18 @@ header {
     display: flex;
     flex-direction: column;
     height: 97vh;
-    justify-content: space-around;
+    justify-content: center;
     opacity: 1;
     padding: 0.5rem 2rem;
     text-align: center;
 }
+
+.images-color,
+.images-light {
+    margin: 10vh 0;
+}
+
+
 
 header .card {margin-top: 0;}
 
@@ -540,11 +550,6 @@ header .card {margin-top: 0;}
     height: 12vh;
     width: 12vh;
 }
-
-#title {
-    display: block;
-}
-
 
 
 /* ARTICE */
@@ -760,18 +765,19 @@ footer a {font-size: .9rem; display: inline-flex; align-items: center;}
     header{
         align-items: center;
         display: grid;
-        grid-template-columns: 1fr 3rem 1fr;
-        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr 20vw 1fr;
+        grid-template-rows: 1fr .1fr 1rem .9fr;
         justify-items: center;
         padding-left:  10vw;
         padding-right: 10vw;
     }
 
-    header .subtitle {
+    header img { grid-row: 1;}
+    header p {grid-row: 2;}
+    .full-hr {grid-row: 3;}
+    header h1 {
+        grid-row: 4;
         align-self: start;
-        grid-column: 3;
-        grid-row: 2;
-        width: 30vw;
     }
 
     .hl-images {display: block;}
@@ -788,7 +794,7 @@ footer a {font-size: .9rem; display: inline-flex; align-items: center;}
     .vr {
         border-left: solid 1px var(--foreground);
         grid-column: 2;
-        grid-row: 1 / span 2;
+        grid-row: 1 / span 4;
         height: 80%;
         width: 1px;
     }
@@ -813,20 +819,12 @@ footer a {font-size: .9rem; display: inline-flex; align-items: center;}
         width: auto;
     }
 
-    #title {
-        display: grid;
-        align-self: flex-start;
-        grid-column: 1;
-        grid-row: 2;
-        width: 20vw;
-        height: auto;
-
-    }
-
     .page-down {
+        top: auto;
+        left: auto;
         align-self: flex-end;
         grid-column: 2;
-        grid-row: 2;
+        grid-row: 4;
     }
 
     .major-hr {display: none;}
