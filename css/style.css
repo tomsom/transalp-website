@@ -695,7 +695,6 @@ footer a {font-size: .9rem; display: inline-flex; align-items: center;}
 
     .card,
     .donate-now {
-        background-color: var(--background);
         border: solid;
         border-color: var(--middleground);
         border-radius: var(--border-radius);
