@@ -343,6 +343,8 @@ p {margin: 0;}
     grid-column: 1 /span 2;
 }
 
+.trnslp-text p { line-height: 1.2rem;}
+
 
 .click-here {
     position: absolute;
@@ -1033,6 +1035,8 @@ footer a {font-size: .9rem; display: inline-flex; align-items: center;}
     .trnslp-text {
         grid-row: 2 /span 3;
     }
+    .trnslp-text p { line-height: 2rem;}
+
 
     #stage-info {
         display: grid;
